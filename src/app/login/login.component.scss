@@ -1,0 +1,149 @@
+body {
+    overflow: none;
+}
+
+#login-page {
+    background: #333333;
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    display: table;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+@media only screen and (orientation: landscape) and (max-width: 812px) {
+    #login-page {
+        background: #333333;
+        width: 40%;
+        height: 100%;
+        margin: auto;
+        position: absolute;
+        display: table;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        margin-bottom: 77px;
+    }
+}
+
+#login-container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#app-logo-login {
+    width: 70%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.input-icon-color {
+    color: #DCDCDC;
+}
+
+.validationLogin {
+    font-weight: normal!important;
+    font-size: 16px;
+}
+.marginHeader{
+    margin-top: -17px!important;
+}
+.logoLogin{
+    margin-bottom: 20px!important;
+    /* text-align: center; */
+}
+.failed {
+    color: #C9302C;
+    text-align: center!important;
+    text-align: -ms-center!important;
+    text-align: -webkit-center!important;
+    text-align: -moz-center!important;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#login-form-container {
+    background: #EFEFEF;
+    border-bottom: 5px solid #6FB43F;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#login-form-container form {
+    padding: 1.5em 2.5em;
+}
+
+#login-form-container form h4 {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+#btn-submit {
+    background: #6FB43F;
+    border-radius: 50%;
+    color: #fff;
+    outline: none;
+}
+
+#login-form-container form label {
+    margin-bottom: 0px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+#alertBox {
+    background-color: #c74d4c !important;
+    padding: 10px !important;
+}
+
+#alertMsg {
+    color: #fff !important;
+    text-align: center !important;
+}
+
+.mat-button-wrapper {
+    margin-right: 14px;
+}
+
+.mat-input-container {
+    width: 100%;
+}
+
+.mat-input-element {
+    padding-left: 10px;
+}
+
+.mat-focused .mat-input-placeholder {
+    color: green!important;
+}
+
+.validation {
+    color: #fff!important;
+    display: block;
+    background-color: #a94442!important;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    #login-page {
+        width: 100%;
+    }
+}
+
+#app-logo-div{
+
+    text-align:center;
+}

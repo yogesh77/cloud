@@ -1,0 +1,99 @@
+<div class="loaderBodyBG">
+   
+    <!-- HTML Table -->
+    <!-- <table>
+
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Index</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Emp of EmpName">
+                <td>{{Emp.name}}</td>
+                <td>{{Emp.id}}</td>               
+            </tr>
+        </tbody>
+    </table> -->
+    <!-- Primeng table -->
+    <!-- <h3><label>Primeng Turbo table</label></h3>
+
+<p-table [value]="details">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Employees</th>
+        </tr>
+    </ng-template>
+    <tr *ngFor="let Emp of details">
+        <td>{{Emp.emplid}}</td>
+    </tr>
+</p-table> -->
+    <!-- <tr *ngFor="let Emp of details">
+<td>{{Emp.emplid}}</td>
+</tr> -->
+
+    <!-- <label>Primeng Turbo table</label> -->
+    <p-table [value]="detail">        
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Employees</th>
+                <th>Department</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body">
+            <tr *ngFor=" let Emp of detail">
+                <td>
+                    {{Emp.emplid}}
+                </td>
+                <td>
+                    {{Emp.Department}}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+    
+    <!-- <table>
+        <tr>
+            <td>
+                {{details.account}}
+            </td>
+            <td>
+                {{details.startDate}}
+            </td>
+            <td>
+                {{details.endDate}}
+            </td>
+            <td>
+                {{details.faxRecord}}
+            </td>
+        </tr>
+</table> -->
+
+    <p-table [value]="data">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Account</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Fax Record</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body">
+            <tr *ngFor="let dat of data">
+                <td>
+                    {{dat.id}}
+                </td>
+                <td>
+                    {{dat.name}}
+                </td>
+                <td>
+                    {{dat.rate}}
+                </td>
+                <td>
+                    {{dat.overageRate}}
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

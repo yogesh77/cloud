@@ -44,7 +44,7 @@ import { ChartModule, CalendarModule, SharedModule } from 'primeng/primeng';
 import { CheckboxModule } from 'primeng/checkbox';
 import { AccordionModule } from 'primeng/accordion';     //accordion and accordion tab
 import { MenuItem } from 'primeng/api';
-
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 /*const appRoutes: Routes = [
     {
@@ -80,7 +80,7 @@ import { MenuItem } from 'primeng/api';
         TableModule,
         SplitButtonModule,
         SharedModule,
-        CheckboxModule,AccordionModule,
+        CheckboxModule,AccordionModule, ProgressSpinnerModule,
         
         
     MatNativeDateModule, MatDatepickerModule, MatSelectModule, MatSlideToggleModule,

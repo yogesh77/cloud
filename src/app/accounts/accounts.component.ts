@@ -11,7 +11,8 @@ import { LoginService } from '../login/login.service';
 export class AccountsComponent implements OnInit {
 
   data: any [];
-  details: any;  
+  details: any;
+  productlist:any[];  
   loginservice: any [];
   accountlist: any = [];
   productList: any = [];
@@ -25,11 +26,13 @@ export class AccountsComponent implements OnInit {
       this.details = JSON.parse(res._body);
       /*this.data = res.json().productSummaries;*/
       this.data = this.details.productSummaries;
+      this.productlist = ['id','name','rate','overageRate'];
       console.log("hello"+res._body);
-      console.log("hel"this.details.productSummaries);
-      console.log("akha"this.data);
+      /*console.log("hel"+this.details.productSummaries);*/
+      console.log("akshat"+this.data);
+      console.log("akshat"+this.details);
       /*console.log("hi"+JSON.stringify(this.details));*/
-      
+      console.log("sum"+this.productlist);
 
        }) 
     /*.then((res) => this.accountrecords(JSON.parse(res._body)))*/   
@@ -42,7 +45,8 @@ export class AccountsComponent implements OnInit {
     ];*/
 
     this.detail = [
-       { emplid : 'Akshat', Department:"CE" },     
+       { emplid : 'Akshat', Department:"CE" },  
+       { emplid : 'Yogesh', Department:"CE" }   
     ];
 
 

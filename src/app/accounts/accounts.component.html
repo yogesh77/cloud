@@ -1,5 +1,5 @@
 <div class="loaderBodyBG">
-   
+    
     <!-- HTML Table -->
     <!-- <table>
 
@@ -32,27 +32,36 @@
     <!-- <tr *ngFor="let Emp of details">
 <td>{{Emp.emplid}}</td>
 </tr> -->
-
     <!-- <label>Primeng Turbo table</label> -->
-    <p-table [value]="detail">        
+    <p-table [value]="detail">
         <ng-template pTemplate="header">
             <tr>
                 <th>Employees</th>
                 <th>Department</th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body">
-            <tr *ngFor=" let Emp of detail">
+        <ng-template pTemplate="body" let-detail>
+            <!-- <tr *ngFor=" let Emp of detail">
                 <td>
                     {{Emp.emplid}}
                 </td>
                 <td>
                     {{Emp.Department}}
                 </td>
+            </tr> -->
+            <tr>
+                <td>{{detail.emplid}}</td>
+                <td>{{detail.Department}}</td>
             </tr>
         </ng-template>
+        <!-- <ng-template pTemplate="body" let-detail>
+        <tr>
+            <td *ngFor=" let col of details">
+                    {{detail[col.emplid]}}
+            </td>
+        </tr>
+    </ng-template> -->
     </p-table>
-    
     <!-- <table>
         <tr>
             <td>
@@ -69,29 +78,47 @@
             </td>
         </tr>
 </table> -->
+    <p-table [value]="data">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Rate</th>
+                <th>OverageRate</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-value>
+            <tr>
+                <td *ngFor=" let productList of productlist ">
+                    {{value[productList]}}
+                </td>               
+            </tr>
+        </ng-template>
+    </p-table>
+
 
     <p-table [value]="data">
         <ng-template pTemplate="header">
             <tr>
-                <th>Account</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Fax Record</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Rate</th>
+                <th>OverageRate</th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body">
-            <tr *ngFor="let dat of data">
+        <ng-template pTemplate="body" let-value>
+            <tr>
                 <td>
-                    {{dat.id}}
+                    {{value.id}}
                 </td>
                 <td>
-                    {{dat.name}}
+                    {{value.name}}
                 </td>
                 <td>
-                    {{dat.rate}}
+                    {{value.rate}}
                 </td>
                 <td>
-                    {{dat.overageRate}}
+                    {{value.overageRate}}
                 </td>
             </tr>
         </ng-template>

@@ -15,6 +15,8 @@ export class LoginComponent  {
     authenticationMessage: string;
     password: string;
     account_response : any;
+    loading: boolean = false;  
+    
     
     constructor(private router: Router, private loginService: LoginService,
      private tokenService: TokenService
@@ -35,7 +37,8 @@ export class LoginComponent  {
      this.loginService.submit(UserName, Password)
      .then((response) =>
         this.onLoginSuccess(JSON.parse(response._body))) 
-      .catch((error) => this.showErrorOnFailedLogin());     
+      .catch((error) => this.showErrorOnFailedLogin()); 
+      this.loading = true; 
      /*this.router.navigate(['/accounts/']);*/ 
           }
 
@@ -51,6 +54,7 @@ export class LoginComponent  {
   onLoginSuccess(loginResponse: any) {
     this.tokenService.setToken(loginResponse.jwt);
     console.log(this.tokenService.getToken());
+       
     this.router.navigate(['/accounts/']);
     
     /*let account = this.loginService.getaccounts();

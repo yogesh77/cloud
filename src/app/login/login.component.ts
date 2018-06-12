@@ -47,7 +47,7 @@ export class LoginComponent  {
      }
   }
 
-  showErrorOnFailedLogin(){ }
+  showErrorOnFailedLogin(){ };
 
   
 

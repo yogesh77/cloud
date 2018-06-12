@@ -1,8 +1,8 @@
 <div id="login-page">
-    <div id="login-container" class="container">
-<div id="login-form-container">
+  <div id="login-container" class="container">
+<div *ngIf="!loading" id="login-form-container">
 
-<form #formCtrl="ngForm" novalidate>
+<form  #formCtrl="ngForm" novalidate>
               <div id="app-logo-div">
                 <img id="app-logo-login logoLogin" class="img-responsive center-block" src="assets/clearfly-logo.png" />
               </div>
@@ -25,9 +25,7 @@
 
                       </div>
 
-                      <div *ngIf = "loading">
-                      <p-progressSpinner></p-progressSpinner>    
-                      </div>
+                      
 
 
                       
@@ -35,6 +33,10 @@
                     
 </form>
 </div>
+
+  <div *ngIf = "loading">
+                      <p-progressSpinner></p-progressSpinner>    
+                      </div>
 
 </div>
 </div>

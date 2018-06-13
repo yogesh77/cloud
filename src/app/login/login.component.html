@@ -1,44 +1,26 @@
 <div id="login-page">
-  <div id="login-container" class="container">
-<div *ngIf="!loading" id="login-form-container">
-
-<form  #formCtrl="ngForm" novalidate>
-              <div id="app-logo-div">
-                <img id="app-logo-login logoLogin" class="img-responsive center-block" src="assets/clearfly-logo.png" />
-              </div>
-              
-<mat-input-container class="mat-full-width">
-                        <input matInput id="username" type="email" name="username" #username="ngModel" (focus)="currentInputFieldFocus()" [(ngModel)]="userName" placeholder="Username" required class="" pattern="^[_A-Za-z0-9]+(\.[_A-Za-z0-9]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[a-zA-Z]{2,4})$" autofocus >
-                    </mat-input-container>
-
-  <mat-input-container class="mat-full-width margin-top-20">
-                        <input matInput id="userpassword" type="password" name="userpassword" #userpassword="ngModel" (focus)="currentInputFieldFocus()" [(ngModel)]="password" placeholder="Password" minlength="1" class="" required  >
-                    </mat-input-container>
-
-
-                      <!-- <div class="col-xs ml-auto">
+    <div id="login-container" class="container">
+        <div *ngIf="!loading" id="login-form-container">
+            <form #formCtrl="ngForm" novalidate>
+                <div id="app-logo-div">
+                    <img id="app-logo-login logoLogin" class="img-responsive center-block" src="assets/clearfly-logo.png" />
+                </div>
+                <mat-input-container class="mat-full-width">
+                    <input matInput id="username" type="email" name="username" #username="ngModel" (focus)="currentInputFieldFocus()" [(ngModel)]="userName" placeholder="Username" required class="" pattern="^[_A-Za-z0-9]+(\.[_A-Za-z0-9]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[a-zA-Z]{2,4})$" autofocus>
+                </mat-input-container>
+                <mat-input-container class="mat-full-width margin-top-20">
+                    <input matInput id="userpassword" type="password" name="userpassword" #userpassword="ngModel" (focus)="currentInputFieldFocus()" [(ngModel)]="password" placeholder="Password" minlength="1" class="" required>
+                </mat-input-container>
+                <!-- <div class="col-xs ml-auto">
                       <button mat-mini-fab ="" (click)="submitUserDetailsOnLogin()" class="btn btn-default pull-right btnlogin"><i class="fa fa-sign-in" aria-hidden="true"></i></button>
                       </div> -->
-                      
-                      <div>
-                        <button mat-mini-fab id="btn-submit" type="submit" class="btn btn-default pull-right btnlogin" (click)="submitUserDetailsOnLogin()"><i class="fa fa-sign-in" aria-hidden="true"></i></button>
-
-                      </div>
-
-                      
-
-
-                      
-
-                    
-</form>
+                <div>
+                    <button mat-mini-fab id="btn-submit" type="submit" class="btn btn-default pull-right btnlogin" (click)="submitUserDetailsOnLogin()"><i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                </div>
+            </form>
+        </div>
+        <div *ngIf="loading">
+            <p-progressSpinner></p-progressSpinner>
+        </div>
+    </div>
 </div>
-
-  <div *ngIf = "loading">
-                      <p-progressSpinner></p-progressSpinner>    
-                      </div>
-
-</div>
-</div>
-
-

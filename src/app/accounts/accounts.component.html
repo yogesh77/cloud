@@ -1,39 +1,8 @@
 <div class="loaderBodyBG">
     
-    <!-- HTML Table -->
-    <!-- <table>
-
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Index</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let Emp of EmpName">
-                <td>{{Emp.name}}</td>
-                <td>{{Emp.id}}</td>               
-            </tr>
-        </tbody>
-    </table> -->
-    <!-- Primeng table -->
-    <!-- <h3><label>Primeng Turbo table</label></h3>
-
-<p-table [value]="details">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Employees</th>
-        </tr>
-    </ng-template>
-    <tr *ngFor="let Emp of details">
-        <td>{{Emp.emplid}}</td>
-    </tr>
-</p-table> -->
-    <!-- <tr *ngFor="let Emp of details">
-<td>{{Emp.emplid}}</td>
-</tr> -->
+   
     <!-- <label>Primeng Turbo table</label> -->
-    <p-table [value]="detail">
+    <!-- <p-table [value]="detail">
         <ng-template pTemplate="header">
             <tr>
                 <th>Employees</th>
@@ -41,43 +10,14 @@
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-detail>
-            <!-- <tr *ngFor=" let Emp of detail">
-                <td>
-                    {{Emp.emplid}}
-                </td>
-                <td>
-                    {{Emp.Department}}
-                </td>
-            </tr> -->
+            
             <tr>
                 <td>{{detail.emplid}}</td>
                 <td>{{detail.Department}}</td>
             </tr>
-        </ng-template>
-        <!-- <ng-template pTemplate="body" let-detail>
-        <tr>
-            <td *ngFor=" let col of details">
-                    {{detail[col.emplid]}}
-            </td>
-        </tr>
-    </ng-template> -->
-    </p-table>
-    <!-- <table>
-        <tr>
-            <td>
-                {{details.account}}
-            </td>
-            <td>
-                {{details.startDate}}
-            </td>
-            <td>
-                {{details.endDate}}
-            </td>
-            <td>
-                {{details.faxRecord}}
-            </td>
-        </tr>
-</table> -->
+        </ng-template>        
+    </p-table> -->
+    
     <p-table [value]="data">
         <ng-template pTemplate="header">
             <tr>
@@ -95,32 +35,5 @@
             </tr>
         </ng-template>
     </p-table>
-
-
-    <p-table [value]="data">
-        <ng-template pTemplate="header">
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Rate</th>
-                <th>OverageRate</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-value>
-            <tr>
-                <td>
-                    {{value.id}}
-                </td>
-                <td>
-                    {{value.name}}
-                </td>
-                <td>
-                    {{value.rate}}
-                </td>
-                <td>
-                    {{value.overageRate}}
-                </td>
-            </tr>
-        </ng-template>
-    </p-table>
-</div>
+    
+    </div>

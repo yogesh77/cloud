@@ -45,6 +45,8 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { AccordionModule } from 'primeng/accordion';     //accordion and accordion tab
 import { MenuItem } from 'primeng/api';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { FaxrecordComponent } from './faxrecord/faxrecord.component';
+import { MenuComponent } from './menu/menu.component';
 
 /*const appRoutes: Routes = [
     {
@@ -58,7 +60,9 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
         AppComponent,
         LoginComponent,
         DashboardComponent,
-        AccountsComponent
+        AccountsComponent,
+        FaxrecordComponent,
+        MenuComponent
 
     ],
     imports     : [

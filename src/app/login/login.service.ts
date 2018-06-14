@@ -12,6 +12,7 @@ export class LoginService{
 
 	URL = "https://cfax-sandbox.clearfly.net/cfax/rest/aaa/login?rememberMe=true";
 	accountUrl = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/products";
+	accountsender = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/senders";
 
 	submit(userName: string, password: string){
 		return this.post(userName, password);
@@ -61,5 +62,24 @@ export class LoginService{
 
 	{ return this.get(accId); }*/
 
+	accountsenderid(): any{	
+		const accountSender = this.accountsender;
+		const token: string = this.tokenService.getToken()
+		const headers = new Headers(			
+	{
+		'Content-Type' : 'application/json',
+		'authorization': 'Bearer ' + token });		
+		return this.http.get(accountSender,{ headers })
+		.toPromise()
+	 	.then((res) => {return res;})		
+      	.catch(this.handleError);
+	}
+/*
+	onLoginSucces(){
+    let tokenvalue = JSON.parse(response._body);
+    this.account = tokenvalue.jwt;
+    this.accountsenderid();
+    console.log(this.accountsenderid());
+  	}*/
 	
 }

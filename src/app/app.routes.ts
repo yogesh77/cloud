@@ -4,6 +4,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FuseSampleModule } from './main/content/sample/sample.module';
 import { FuseMainComponent } from './main/main.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { FaxrecordComponent } from './faxrecord/faxrecord.component';
+import { MenuComponent } from './menu/menu.component';
+
 
 export const routes: Routes = [
 
@@ -23,11 +26,19 @@ export const routes: Routes = [
 	path: 'accounts',
 	component: AccountsComponent,
 },
+{
+	path: 'faxrecord',
+	component: FaxrecordComponent,
+},
 
 /*{
 	path: 'sample',
 	component: FuseSampleModule,
 },*/
+{
+	path: 'menu',
+	component: MenuComponent,
+},
 
 {
 	path: 'main',

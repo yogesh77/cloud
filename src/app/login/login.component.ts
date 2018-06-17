@@ -56,7 +56,8 @@ export class LoginComponent  {
     console.log(this.tokenService.getToken());
        
     this.router.navigate(['/accounts/']);
-    /*this.router.navigate(['/menu/']);*/
+/*    this.router.navigate(['/faxrecord/']);
+*/    /*this.router.navigate(['/menu/']);*/
     
     /*let account = this.loginService.getaccounts();
     this.loginService.getaccounts()

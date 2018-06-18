@@ -17,29 +17,33 @@ export class FaxrecordComponent  {
 	productlist:any[];  
 	loginservice: any [];
 	accountlist: any = [];
-	productList: any = [];
+	productList: any;
 
   constructor(private loginService: LoginService){  	
+    this.productlist = [];
+    this.details = {};
     this.loginService.accountsenderid()
-    /*.then((res) => console.log(res))    
-    .catch(this.handleError);
-    */
+    /*.then((res) => console.log(JSON.parse(res._body)))*/
     .then((res) => {
+      
       this.details = JSON.parse(res._body);
-      /*this.details = res.json();*/
-      /*this.data = this.details;
-       for(let key in this.data[0]){
+      this.data = this.details.sender;
+
+      for(let key in this.data[0]){
          this.productlist.push(key);
-       }*/
+       }
 
-       console.log(this.details);
+      console.log(this.details);
+      console.log( this.data);
 
+    })
+
+  
 
 
   }
-}
-}
+  
 
  
   
-
+}

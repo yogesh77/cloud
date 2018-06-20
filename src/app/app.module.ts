@@ -39,7 +39,7 @@ import { CookieService, TokenService, RefreshService } from './app.service';
 import { AccountsComponent } from './accounts/accounts.component';
 import { TableModule } from 'primeng/table';
 import { SplitButtonModule } from 'primeng/splitbutton';
-import { ChartModule, CalendarModule, SharedModule } from 'primeng/primeng';
+import { ChartModule, CalendarModule, SharedModule, DataTableModule } from 'primeng/primeng';
 
 import { CheckboxModule } from 'primeng/checkbox';
 import { AccordionModule } from 'primeng/accordion';     //accordion and accordion tab
@@ -47,6 +47,7 @@ import { MenuItem } from 'primeng/api';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { FaxrecordComponent } from './faxrecord/faxrecord.component';
 import { MenuComponent } from './menu/menu.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 /*const appRoutes: Routes = [
     {
@@ -62,7 +63,8 @@ import { MenuComponent } from './menu/menu.component';
         DashboardComponent,
         AccountsComponent,
         FaxrecordComponent,
-        MenuComponent
+        MenuComponent,
+        DialogComponent
 
     ],
     imports     : [
@@ -84,7 +86,7 @@ import { MenuComponent } from './menu/menu.component';
         TableModule,
         SplitButtonModule,
         SharedModule,
-        CheckboxModule,AccordionModule, ProgressSpinnerModule,
+        CheckboxModule,AccordionModule, ProgressSpinnerModule, DataTableModule,
         
         
     MatNativeDateModule, MatDatepickerModule, MatSelectModule, MatSlideToggleModule,

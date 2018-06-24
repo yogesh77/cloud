@@ -47,7 +47,7 @@ import { MenuItem } from 'primeng/api';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { FaxrecordComponent } from './faxrecord/faxrecord.component';
 import { MenuComponent } from './menu/menu.component';
-import { DialogComponent } from './dialog/dialog.component';
+
 
 /*const appRoutes: Routes = [
     {
@@ -64,8 +64,7 @@ import { DialogComponent } from './dialog/dialog.component';
         AccountsComponent,
         FaxrecordComponent,
         MenuComponent,
-        DialogComponent
-
+        
     ],
     imports     : [
         BrowserModule,

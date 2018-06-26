@@ -50,10 +50,12 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { FaxrecordComponent } from './faxrecord/faxrecord.component';
 import { MenuComponent } from './menu/menu.component';
 
+
 import { RecordsComponent } from './records/records.component';
 import { RecordstableComponent } from './recordstable/recordstable.component';
 /*import { TableBasicExample } from './faxrecord/faxrecord.component';*/
 /*import { PeriodicElement } from './faxrecord/faxrecord.component';*/
+
 
 /*const appRoutes: Routes = [
     {

@@ -71,7 +71,8 @@ import { RecordstableComponent } from './recordstable/recordstable.component';
         DashboardComponent,
         AccountsComponent,
         FaxrecordComponent,
-        MenuComponent,        
+        MenuComponent,
+        DialogComponent,
         RecordsComponent,
         RecordstableComponent,
         /*TableBasicExample,*/

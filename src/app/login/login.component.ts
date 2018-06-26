@@ -55,7 +55,10 @@ export class LoginComponent  {
     this.tokenService.setToken(loginResponse.jwt);
     console.log(this.tokenService.getToken());
        
-    this.router.navigate(['/accounts/']);
+     /*this.router.navigate(['/faxrecord/']);*/
+     this.router.navigate(['/recordstable/']);
+     
+     /*this.router.navigate(['/accounts/']);*/
     /*this.router.navigate(['/menu/']);*/
     /*this.router.navigate(['/faxrecord/']);*/
     /*this.router.navigate(['/main/']);*/

@@ -6,7 +6,7 @@ import { FuseMainComponent } from './main/main.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FaxrecordComponent } from './faxrecord/faxrecord.component';
 import { MenuComponent } from './menu/menu.component';
-
+import { RecordstableComponent } from './recordstable/recordstable.component';
 
 export const routes: Routes = [
 
@@ -20,7 +20,11 @@ export const routes: Routes = [
 	component: DashboardComponent,
 
 },
+{
 
+	path: 'recordstable',
+	component: RecordstableComponent,
+},
 {
 
 	path: 'accounts',

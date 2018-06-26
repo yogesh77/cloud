@@ -26,8 +26,10 @@ import { MatFormFieldModule } from '@angular/material';
 import { MatSelectModule, MatProgressBarModule, MatCardModule, MatCheckboxModule, MatSlideToggleModule,
 MatIconModule, MatInputModule, MatButtonModule, MatProgressSpinnerModule, MatTooltipModule, MatRadioModule} from '@angular/material';
 
-import { MatDialogModule, MatNativeDateModule, MatTableModule,
+import { MatDialogModule, MatNativeDateModule,
          MatDatepickerModule, MatSidenavModule, MatToolbarModule, MatListModule, MatSortModule, MatPaginatorModule } from '@angular/material';
+
+import { MatTableModule } from '@angular/material/table';
 
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -48,6 +50,10 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { FaxrecordComponent } from './faxrecord/faxrecord.component';
 import { MenuComponent } from './menu/menu.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { RecordsComponent } from './records/records.component';
+import { RecordstableComponent } from './recordstable/recordstable.component';
+/*import { TableBasicExample } from './faxrecord/faxrecord.component';*/
+/*import { PeriodicElement } from './faxrecord/faxrecord.component';*/
 
 /*const appRoutes: Routes = [
     {
@@ -55,6 +61,8 @@ import { DialogComponent } from './dialog/dialog.component';
         redirectTo: 'sample'
     }
 ];*/
+/*import { DataSource } from '@angular/cdk/table';*/
+
 
 @NgModule({
     declarations: [
@@ -64,7 +72,11 @@ import { DialogComponent } from './dialog/dialog.component';
         AccountsComponent,
         FaxrecordComponent,
         MenuComponent,
-        DialogComponent
+        DialogComponent,
+        RecordsComponent,
+        RecordstableComponent,
+        /*TableBasicExample,*/
+        /*PeriodicElement*/
 
     ],
     imports     : [
@@ -73,6 +85,7 @@ import { DialogComponent } from './dialog/dialog.component';
         HttpClientModule,
         /*RouterModule.forRoot(appRoutes),*/
         TranslateModule.forRoot(),
+        /*DataSource,*/
 
         // Fuse Main and Shared modules
         FuseModule.forRoot(fuseConfig),
@@ -101,7 +114,7 @@ import { DialogComponent } from './dialog/dialog.component';
         AppComponent
     ],
 
-    providers: [ LoginService, TokenService]
+    providers: [ LoginService, TokenService,]
 })
 export class AppModule
 {

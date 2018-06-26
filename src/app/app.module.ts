@@ -49,7 +49,7 @@ import { MenuItem } from 'primeng/api';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { FaxrecordComponent } from './faxrecord/faxrecord.component';
 import { MenuComponent } from './menu/menu.component';
-import { DialogComponent } from './dialog/dialog.component';
+
 import { RecordsComponent } from './records/records.component';
 import { RecordstableComponent } from './recordstable/recordstable.component';
 /*import { TableBasicExample } from './faxrecord/faxrecord.component';*/
@@ -71,8 +71,7 @@ import { RecordstableComponent } from './recordstable/recordstable.component';
         DashboardComponent,
         AccountsComponent,
         FaxrecordComponent,
-        MenuComponent,
-        DialogComponent,
+        MenuComponent,        
         RecordsComponent,
         RecordstableComponent,
         /*TableBasicExample,*/

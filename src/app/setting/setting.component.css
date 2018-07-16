@@ -1,0 +1,458 @@
+.loaderBodyBG {
+    background-color: #ffffff;
+    z-index: 20;
+    height: 100%;
+    min-height: 550px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+body {
+    overflow: none;
+}
+
+#settingTab {
+    background: #efefef;
+    width: 100%;
+    font-size: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.labelFax {
+    padding-top: 5px;
+    color: black;
+    font-weight: 600;
+}
+
+.authButton {
+    margin-bottom: 4px;
+    margin-top: 10px;
+    float: right;
+    color: #6fb43f;
+}
+
+.deleteBtn {
+    color: #C9302C;
+}
+
+.mat-select-trigger {
+    background-color: white!important;
+}
+
+.fa-plus:before {
+    content: '\f067';
+    margin-left: 15px;
+}
+
+.testPage {
+    font-weight: 500!important;
+    font-size: 16px;
+}
+
+.notification_error {
+    font-size: 16px;
+}
+
+.danger {
+    background-color: #d9534f!important;
+    border-color: #d9534f!important;
+    color: #fff!important;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+
+#sendBtn {
+    float: right;
+    margin-right: 22px;
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid #ccc;
+    color: #000;
+    margin-top: 10px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.success {
+    background: #6fb43f;
+    float: right;
+    /* padding-right: 29px; */
+    margin-right: 22px;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.setBut {
+    background: #6FB43F;
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+
+#check1 {
+    color: #6FB43F!important;
+}
+
+.done {
+    margin-bottom: 10px;
+}
+
+.al {
+    text-overflow: ellipsis;
+    width: 17em;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.al .tooltiptext {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    padding-right: 4px;
+    padding-left: 4px;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+    display: block;
+    word-break: break-word;
+    width: auto;
+    white-space: normal;
+    word-break: break-all;
+    margin-top: 10px;
+}
+
+.al .tooltiptext::after {
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.al:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mat-input-container {
+    width: 100%;
+}
+
+.textArea {
+    resize: none!important;
+    overflow: hidden;
+}
+
+.popUp {
+    margin-top: 20% !important;
+    width: 35% !important;
+}
+
+.sendIcon {
+    color: #6fb43f!important;
+}
+
+.heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-header {
+    border-bottom: 0px !important;
+    color: black;
+    font-weight: bold;
+}
+
+.settingCard {
+    padding: 0px;
+    padding-left: 20px;
+}
+
+.popBody {
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+}
+
+.popInput {
+    margin-left: 10px;
+    width: 95%;
+    border: 0px;
+    background: #fff;
+    height: 30px;
+}
+
+.popBtn {
+    background: #6fb43f;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.upBtn {
+    margin-left: 100%;
+}
+
+.canBtn {
+    margin-left: 45px;
+}
+
+.updBtn {
+    padding-left: 25%;
+}
+
+.canCol {
+    padding-left: 10%;
+}
+
+.senderTable {
+    background: #dcdcdc;
+}
+
+.headTable {
+    padding: 0px !important;
+    border-top: 0px !important;
+}
+
+.senderBtn {
+    float: right;
+}
+
+.adBtn {
+    margin-left: 250%;
+}
+
+.starCol {
+    color: red;
+}
+
+#alertBox {
+    background-color: #c74d4c !important;
+    padding: 10px !important;
+}
+
+#alertMsg {
+    color: #fff !important;
+    align: center !important;
+}
+
+.popInput1 {
+    margin-left: 15px !important;
+    width: 90% !important;
+    background: #efefef;
+    height: 34px;
+}
+
+.popBtn[disabled] {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .65;
+}
+
+#alertMsg1 {
+    color: #fff !important;
+    text-align: center !important;
+    background-color: #c74d4c !important;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.modal-header-alert {
+    padding: 10px !important;
+    border-bottom: 1px !important;
+    color: black;
+    font-weight: bold;
+    padding: 15px !important;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.popBodyAlert {
+    padding-left: 0px !important;
+    font-size: 14px;
+    color: black;
+    padding-right: 0px !important;
+}
+
+.alertbtn {
+    margin-left: 90%;
+}
+
+.senrecBtn {
+    margin-left: 25px;
+}
+
+
+/** Table CSS */
+
+.cFax-sub-table {
+    font-size: 12px;
+    table-layout: fixed;
+}
+
+.cFax-sub-table tr:nth-child(odd):not(:first-child) {
+    background-color: #EFEFEF;
+}
+
+.cFax-sub-table .table-header {
+    background: #6FB43F;
+    color: #fff;
+}
+
+.cFax-sub-table #email {
+    width: 50%;
+}
+
+.cFax-sub-table #alias {
+    width: 30%;
+}
+
+.cFax-sub-table #action {
+    width: 20%;
+}
+
+.option-bold {
+    font-weight: bold;
+}
+
+.margin-top {
+    margin-top: 0px;
+}
+
+.send {
+    background-color: #6FB43F!important;
+    color: #fff!important;
+}
+
+mat-card {
+    margin-top: 15px;
+}
+
+mat-card-content {
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.settings-box {
+    clear: both;
+    border-top: 1px solid silver;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+
+.settings-box-content {
+    padding-top: 10px;
+    margin-left: 25px;
+}
+
+mat-select .mat-select-trigger {
+    background-color: white!important;
+}
+
+span.mat-select-placeholder ng-trigger ng-trigger-transformPlaceholder mat-floating-placeholder {
+    color: green!important;
+}
+
+.mat-option.mat-selected.mat-primary,
+.mat-primary .mat-option.mat-selected {
+    color: green!important;
+}
+
+.mat-primary .mat-option.mat-selected {
+    color: green!important;
+}

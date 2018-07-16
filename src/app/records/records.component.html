@@ -1,0 +1,55 @@
+<form #formCtrl="ngForm" novalidate>
+<div class="container">
+    <p-panel header="Fax Records">
+        <form>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label>Start Date :</label>
+                        <p-calendar dateFormat="dd/mm/yy" name="startDate"#startDate="ngModel" [(ngModel)]="faxRecordsStartDate"></p-calendar>
+                    </div>
+                    <div class="col-lg-4">
+                        <label>End Date :</label>
+                        <p-calendar dateFormat="dd/mm/yy" name="endDate"#endDate="ngModel" [(ngModel)]="faxRecordsEndDate"></p-calendar>
+                    </div>
+                    <div class="col-lg-4">
+                        <button pButton class="filterBtn" (click)="recordDownlaod()" type="button" label="Submit"></button>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Filter by/ Number:</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="text" pInputText />
+                    </div>
+                    <div class="col-lg-3">
+                        <button pButton class="downloadBtn" type="button" label="Submit"></button>
+                    </div>
+
+                </div>              
+            </div>
+        </form>
+    </p-panel>
+</div>
+
+    <div class="container">
+    <p-table [value] = "data">
+    <ng-template pTemplate="header">
+        <tr>
+        <th *ngFor = "let faxrecord of faxRecordsColumns">
+            {{faxrecord}}
+        </th>    
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-record >
+        
+    </ng-template>
+        
+    </p-table>
+    </div>
+
+
+</form>

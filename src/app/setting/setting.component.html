@@ -1,0 +1,53 @@
+<div class="container">
+<div class="setting">
+<div class = "loaderBodyBG">
+  <p-card>
+   <p-dropdown [options]="productlist" ></p-dropdown>
+
+        <h4>Account Summary</h4>
+        <p-card>       
+            <div class="settings-box">
+                <strong>Fax Number</strong>
+                <div class="settings-box-content">
+                    <p class="text-muted">This is your fax number.</p>
+                    <div class="pull-left"><strong>{{userAccountDetails}}</strong></div>
+                </div>
+            </div>
+            <div class="settings-box">
+                <strong>Current Usage</strong>
+                <div class="settings-box-content">
+
+                    <p class="text-muted">This is how many pages you've sent and received this month</p>
+                    <div class="pull-left"><strong>{{accountCurrentUsage}} pages</strong></div>
+                </div>
+            </div>
+            <div>
+                <p-table [value]="data">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Status</th>
+                                <th>Id</th>
+                                <th>Faxnumber</th>
+                                <th>Alias</th>
+                                <th>Display Name</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-value>
+                            <tr>
+                            <td *ngFor=" let productList of productlist ">
+                                    {{value[productList]}}
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+            </div>
+        </p-card>
+    </p-card>
+
+
+  
+
+
+</div>
+</div>
+</div>

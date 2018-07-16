@@ -6,24 +6,30 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FuseSharedModule } from '@fuse/shared.module';
 
 import { FuseSampleComponent } from './sample.component';
+import { MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatRadioModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { FaxRecordsComponent } from '../faxrecords/faxrecords.component';
 
 const routes = [
     {
         path     : 'sample',
         component: FuseSampleComponent
+    },
+    {
+        path     : 'faxrecords',
+        component: FaxRecordsComponent        
     }
 ];
 
 @NgModule({
     declarations: [
-        FuseSampleComponent
+        FuseSampleComponent, FaxRecordsComponent
     ],
     imports     : [
         RouterModule.forChild(routes),
 
         TranslateModule,
 
-        FuseSharedModule
+        FuseSharedModule, MatSidenavModule
     ],
     exports     : [
         FuseSampleComponent

@@ -7,8 +7,12 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { FaxrecordComponent } from './faxrecord/faxrecord.component';
 import { MenuComponent } from './menu/menu.component';
 import { RecordstableComponent } from './recordstable/recordstable.component';
+import { RecordsComponent } from './records/records.component';
+import { SettingComponent } from './setting/setting.component';
 
 export const routes: Routes = [
+
+
 
 {
 	path: 'login',
@@ -18,6 +22,11 @@ export const routes: Routes = [
 {
 	path: 'dashboard',
 	component: DashboardComponent,
+
+},
+{
+	path: 'records',
+	component: RecordsComponent,
 
 },
 {
@@ -47,6 +56,10 @@ export const routes: Routes = [
 {
 	path: 'main',
 	component: FuseMainComponent,
+},
+{
+	path: 'setting',
+	component: SettingComponent,
 }
 
 ];

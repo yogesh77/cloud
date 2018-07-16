@@ -53,18 +53,14 @@ import { MenuComponent } from './menu/menu.component';
 
 import { RecordsComponent } from './records/records.component';
 import { RecordstableComponent } from './recordstable/recordstable.component';
-/*import { TableBasicExample } from './faxrecord/faxrecord.component';*/
-/*import { PeriodicElement } from './faxrecord/faxrecord.component';*/
+import { PanelModule } from 'primeng/panel';
+import { InputTextModule } from 'primeng/inputtext';
 
-
-/*const appRoutes: Routes = [
-    {
-        path      : '**',
-        redirectTo: 'sample'
-    }
-];*/
-/*import { DataSource } from '@angular/cdk/table';*/
-
+import { ButtonModule } from 'primeng/button';
+import { PasswordModule } from 'primeng/password';
+import { SettingComponent } from './setting/setting.component';
+import { CardModule } from 'primeng/card';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
     declarations: [
@@ -74,9 +70,10 @@ import { RecordstableComponent } from './recordstable/recordstable.component';
         AccountsComponent,
         FaxrecordComponent,
         MenuComponent,
-        DialogComponent,
+        
         RecordsComponent,
         RecordstableComponent,
+        SettingComponent,
         /*TableBasicExample,*/
         /*PeriodicElement*/
 
@@ -102,13 +99,13 @@ import { RecordstableComponent } from './recordstable/recordstable.component';
         SplitButtonModule,
         SharedModule,
         CheckboxModule,AccordionModule, ProgressSpinnerModule, DataTableModule,
-        
-        
+        PanelModule, InputTextModule, CalendarModule, ButtonModule, PasswordModule,        
     MatNativeDateModule, MatDatepickerModule, MatSelectModule, MatSlideToggleModule,
     MatButtonModule, MatProgressSpinnerModule, MatTooltipModule, MatCardModule,
     MatProgressBarModule, MatCheckboxModule, MatInputModule, BrowserAnimationsModule,
     MatDialogModule, MatTableModule, MatRadioModule, CdkTableModule, MatIconModule,
-    MatListModule, MatToolbarModule, MatSidenavModule, MatPaginatorModule, MatSortModule
+    MatListModule, MatToolbarModule, MatSidenavModule, MatPaginatorModule, MatSortModule,
+    CardModule, DropdownModule
 
 
     ],

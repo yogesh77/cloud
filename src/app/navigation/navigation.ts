@@ -18,7 +18,17 @@ export const navigation = [
                     'bg'   : '#F44336',
                     'fg'   : '#FFFFFF'
                 }
-            }
-        ]
-    }
+            }        
+        ],
+    },
+
+    {
+
+                'id'   : 'Fax Records',
+                'title': 'Sample',
+                'translate': 'Fax Records',
+                'type' : 'item',
+                'icon' : 'email',
+                'url'  : '/faxrecords',
+     }
 ];

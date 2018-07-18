@@ -103,6 +103,14 @@ export class LoginService{
         .catch(this.handleError);        
     }
 
-    
+    accountDetails(): Promise<any> {
+    	const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1";
+    	const token: string = this.tokenService.getToken();
+    	const headers = new Headers({ Authorization: 'Bearer ' + token });
+      	return this.http.get(url, { headers })
+        .toPromise()
+        .then((res) => res)
+        .catch(this.handleError);    
+    }
 }
 

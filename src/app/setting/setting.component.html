@@ -4,6 +4,7 @@
       <p-card>
         <p-dropdown [options]="productlists" placeholder="Select a Record" 
         (onChange)="faxrecordvalue($event.value)"></p-dropdown>
+        <button (click)="displayfaxrecord()">Display</button>
         <br>
         <br>        
         <h4>Account Summary</h4>

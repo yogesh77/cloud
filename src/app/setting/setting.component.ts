@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login/login.service';
 import { SelectItem } from 'primeng/api';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-setting',
@@ -20,14 +21,20 @@ export class SettingComponent {
   faxvalues:any[];
   productid:any[];
   productlists: any[];
-  faxrecordvalues: string;
-  
+  faxrecordvalues: number;
+  displayrecords: any;
+  recordsStartDate: any;
+  recordsEndDate:any;
+  faxRecordsStartDate: Date;
+  faxRecordsEndDate: any;
   
   constructor(private loginService: LoginService) {  	
 
   	this.productid = [];
   	this.productlist = [];
   	this.productlists = [];
+ 	this.faxRecordsStartDate = new Date(moment.utc().startOf('month').format('YYYY-MM-DD hh:mm:ss'));
+    this.faxRecordsEndDate = new Date(moment.utc(this.faxRecordsStartDate).endOf('month').format('YYYY-MM-DD hh:mm:ss'));
 
     this.loginService.getAccountsDetail()        
 
@@ -61,28 +68,24 @@ export class SettingComponent {
 
 					        })
 					        
-			.catch();  
+			.catch();  		 	
 
   }
   
 faxrecordvalue(value:string){
 
-	alert(value +"Fax record value");
+	/*alert(value +"Fax record value");*/
 
 	var len = this.allfaxrecords.length;
 
-				/*for (var i = 0; i < len; i++) {
-						this.productid.push({
-						"value": this.allfaxrecords[i].id
-						})}*/
-					
-		for (var i = 0; i < len; i++) {		
-		
+									
+		for (var i = 0; i < len; i++) {			
 
 		if (this.allfaxrecords[i].faxNumber == value ) {
 
 			this.faxrecordvalues = this.allfaxrecords[i].id;
-			 	
+
+			
 			 } 
 
 	}
@@ -91,13 +94,18 @@ faxrecordvalue(value:string){
 	}
 
 
-/*for(let key in this.allfaxrecords[0].id){
-        		 this.allfaxrecords;
+displayfaxrecord(){
 
-       }*/
+	/*this.loginService.displayRecords(1, this.recordsStartDate,this.recordsEndDate)*/
 
-	/*console.log('values'+ this.allfaxrecords[i].id);*/
+		this.loginService.displayRecords(this.faxrecordvalues,this.faxRecordsStartDate,this.faxRecordsEndDate)
+			.then((res) => {
 
+			/*this.displayrecords = res._body;*/
+
+			console.log('Display'+ this.displayrecords);
+		})
+			.catch()
 }
 
 }

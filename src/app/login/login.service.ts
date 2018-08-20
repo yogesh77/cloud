@@ -112,5 +112,26 @@ export class LoginService{
         .then((res) => res)
         .catch(this.handleError);    
     }
+
+    displayRecords(accId: number, startDate: Date, endDate: string) {    	
+    const url = 'this.API_END_POINT' + 'accounts/' + accId + '/records?start=' +
+    startDate + '&end=' + endDate;    
+    const token: string = this.tokenService.getToken();
+    const headers = new Headers({ Authorization: 'Bearer ' + token });
+       return this.http.get(url, { headers })
+      .toPromise()
+      .then((res) => res)
+      .catch(this.handleError);
+      }
+
+    displayrecord() {    	
+    const url = 'https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/records?start=2018-07-01&end=2018-07-31';    
+    const token: string = this.tokenService.getToken();
+    const headers = new Headers({ Authorization: 'Bearer ' + token });
+       return this.http.get(url, { headers })
+      .toPromise()
+      .then((res) => res)
+      .catch(this.handleError);
+      }
 }
 

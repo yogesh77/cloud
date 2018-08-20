@@ -61,6 +61,7 @@ import { PasswordModule } from 'primeng/password';
 import { SettingComponent } from './setting/setting.component';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
+import { EmailComponent } from './email/email.component';
 
 @NgModule({
     declarations: [
@@ -74,6 +75,7 @@ import { DropdownModule } from 'primeng/dropdown';
         RecordsComponent,
         RecordstableComponent,
         SettingComponent,
+        EmailComponent,
         /*TableBasicExample,*/
         /*PeriodicElement*/
 

@@ -9,10 +9,19 @@ import { MenuComponent } from './menu/menu.component';
 import { RecordstableComponent } from './recordstable/recordstable.component';
 import { RecordsComponent } from './records/records.component';
 import { SettingComponent } from './setting/setting.component';
+import { EmailComponent } from './email/email.component';
 
 export const routes: Routes = [
 
+{
+	path: 'email',
+    component: EmailComponent,    
+},
 
+{
+	path: 'login',
+    component: LoginComponent,    
+},
 
 {
 	path: 'login',

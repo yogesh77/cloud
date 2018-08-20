@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./email.component.css']
 })
 export class EmailComponent implements OnInit {
-	authorizedUserDialog: boolean;
+	display: boolean = false;
 
   constructor() { }
 
   addAuthorisedUser(){
-  	alert("hello");
+  	this.display = true;
   }
 
   ngOnInit() {

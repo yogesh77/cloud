@@ -11,15 +11,10 @@
             <i class="fa fa-plus authBtn" aria-hidden="true"></i> Add Authorization
           </button>
         </div>
-        </div>
-        <!-- <app-dialog [visible]="authorizedUserDialog" #addAuthorizedUser>
-          <div class="app-header">
-            Add authorization
-            <button type="button" class="close outline" data-dismiss="addAuthorizedUser" (click)="addAuthorizedUser"></button>
-          </div>
-        </app-dialog>
-      </div> -->
-      </p-card>
-    </div>
+      </div>
+      <p-dialog header="Add authorization" [(visible)]="display">
+        E-mail
+      </p-dialog>
+    </p-card>
   </div>
-
+</div>

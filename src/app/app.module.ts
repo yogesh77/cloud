@@ -62,6 +62,7 @@ import { SettingComponent } from './setting/setting.component';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { EmailComponent } from './email/email.component';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
     declarations: [
@@ -107,8 +108,9 @@ import { EmailComponent } from './email/email.component';
     MatProgressBarModule, MatCheckboxModule, MatInputModule, BrowserAnimationsModule,
     MatDialogModule, MatTableModule, MatRadioModule, CdkTableModule, MatIconModule,
     MatListModule, MatToolbarModule, MatSidenavModule, MatPaginatorModule, MatSortModule,
-    CardModule, DropdownModule
+    CardModule, DropdownModule,
 
+    DialogModule
 
     ],
     bootstrap   : [

@@ -60,24 +60,24 @@ export class EmailComponent implements OnInit {
   // }
 
   
-  onChange($event) {   
+  // onChange($event) {   
    
-    this.selectedIndex = $event.index;    
-    switch (this.selectedIndex) {
-      case 0: 
-      alert("dashboard");       
-        this.router.navigate(['/dashboard']);                  
-        break;
-      case 1: 
-        alert("accounts");
-      this.router.navigate(['/accounts']);     
-      default:
-      alert("hello");
-      break;
-    }
+  //   this.selectedIndex = $event.index;    
+  //   switch (this.selectedIndex) {
+  //     case 0: 
+  //     alert("dashboard");       
+  //       this.router.navigate(['/dashboard']);                  
+  //       break;
+  //     case 1: 
+  //       alert("accounts");
+  //     this.router.navigate(['/accounts']);     
+  //     default:
+  //     alert("hello");
+  //     break;
+  //   }
 
-    console.log(this.selectedIndex);
-  }
+  //   console.log(this.selectedIndex);
+  // }
   
   
 

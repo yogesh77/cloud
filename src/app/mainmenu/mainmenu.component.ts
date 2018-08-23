@@ -23,10 +23,12 @@ onChange($event) {
       alert("dashboard");       
         this.router.navigate(['/dashboard']);                  
         break;
-      case 1: 
-        alert("accounts");
-      this.router.navigate(['/accounts']);
-      break;     
+      case 1:         
+      	this.router.navigate(['/accounts']);
+      	break; 
+      case 2:         
+      	this.router.navigate(['/email']);
+      	break;  
       default:
       alert("hello");
       break;

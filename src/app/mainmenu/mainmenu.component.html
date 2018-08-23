@@ -1,5 +1,8 @@
 <div class="loaderBodyBG">
+<div class="heading">
 <h2>Clearfly</h2>
+</div>
+
 <p-tabView (onChange)="onChange($event)" [activeIndex]="selectedIndex">    
     <p-tabPanel header="dashboard" [selected]="true">
         Dashboard
@@ -7,6 +10,10 @@
     <p-tabPanel header="accounts">
         Accounts
     </p-tabPanel>
+    <p-tabPanel header="email">
+        email
+    </p-tabPanel>
 </p-tabView>
 
 </div>
+

@@ -12,20 +12,18 @@
 }
 
 .displaybox{
-    background-color: #ffffff;
-    width: 500px;
-    border: 5px #080808 ;
-    padding: 25px;
+    margin-bottom: 4px;
+    margin-top: 10px;
+    float: right;
+    color: #6fb43f;
+    width: 150px;
+    height: 40px;
+/*    border: 1px solid #080808 ;*/
+    text-align: center;
     
 }
 
-.pull-left{
-    width: 100px;
-    height: 50px;
-    border: 1px solid #080808 ;
-    /*align-content: left;*/    
 
-}
 .authBtn {
     color: #6fb43f;
 }

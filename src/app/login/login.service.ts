@@ -48,7 +48,7 @@ export class LoginService{
 
 	
 	//for error handling
-	handleError(){ }
+	
 
 	//on login success
 	/*onLoginSuccess(response){
@@ -124,7 +124,7 @@ export class LoginService{
       .catch(this.handleError);
       }
 
-    displayrecord() {    	
+    displayrecord(): Promise<any> {    	
     const url = 'https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/records?start=2018-07-01&end=2018-07-31';    
     const token: string = this.tokenService.getToken();
     const headers = new Headers({ Authorization: 'Bearer ' + token });
@@ -133,5 +133,41 @@ export class LoginService{
       .then((res) => res)
       .catch(this.handleError);
       }
+
+
+     adduserauthorization(recordData: any) : Promise<any> {
+       // const url = 'this.API_END_POINT' + 'accounts/1/authorizations/add';
+       const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/authorizations/add";
+       const token : string = this.tokenService.getToken();
+       const headers = new Headers();
+       headers.append('Authorization', 'Bearer ' + token);
+       headers.append('Content-Type', 'application/json');
+       // console.log("hee", JSON.stringify({'emailAddress':recordData}));       
+       return this.http.post(url, JSON.stringify({'emailAddress':recordData}), { headers })
+      .toPromise()
+      .then((res) => {
+        console.log("list"+res);
+        return res;
+      })  
+      .catch(this.handleError);
+     }
+
+     showuserauthorization(): Promise<any> {
+       const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/authorizations";
+       const token : string = this.tokenService.getToken();
+       const headers = new Headers({ Authorization: 'Bearer ' + token });
+       return this.http.get(url, { headers })
+      .toPromise()
+      .then((res) => {
+        // console.log("hello"+res);
+        return res;
+      })      
+      .catch(this.handleError);
+     }
+
+    handleError(eve: string){
+      console.log("eve",eve)
+     }
+
 }
 

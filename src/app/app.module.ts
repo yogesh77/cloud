@@ -63,6 +63,8 @@ import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { EmailComponent } from './email/email.component';
 import { DialogModule } from 'primeng/dialog';
+import { TabViewModule } from 'primeng/tabview';
+import { MainmenuComponent } from './mainmenu/mainmenu.component';
 
 @NgModule({
     declarations: [
@@ -77,6 +79,7 @@ import { DialogModule } from 'primeng/dialog';
         RecordstableComponent,
         SettingComponent,
         EmailComponent,
+        MainmenuComponent,
         /*TableBasicExample,*/
         /*PeriodicElement*/
 
@@ -110,7 +113,7 @@ import { DialogModule } from 'primeng/dialog';
     MatListModule, MatToolbarModule, MatSidenavModule, MatPaginatorModule, MatSortModule,
     CardModule, DropdownModule,
 
-    DialogModule
+    DialogModule, TabViewModule
 
     ],
     bootstrap   : [

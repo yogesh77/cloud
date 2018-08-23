@@ -10,6 +10,7 @@ import { RecordstableComponent } from './recordstable/recordstable.component';
 import { RecordsComponent } from './records/records.component';
 import { SettingComponent } from './setting/setting.component';
 import { EmailComponent } from './email/email.component';
+import { MainmenuComponent } from './mainmenu/mainmenu.component';
 
 export const routes: Routes = [
 
@@ -69,6 +70,10 @@ export const routes: Routes = [
 {
 	path: 'setting',
 	component: SettingComponent,
+},
+{
+	path: 'mainmenu',
+	component: MainmenuComponent,
 }
 
 ];

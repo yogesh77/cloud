@@ -57,9 +57,11 @@ export class LoginComponent  {
        
      // this.router.navigate(['/main/']);
      // this.router.navigate(['/records/']);
-     this.router.navigate(['/email/']);
-     // this.router.navigate(['/setting/']);
+     // this.router.navigate(['/email/']);
+     this.router.navigate(['/mainmenu/']);
      // this.router.navigate(['/accounts/']);
+     // this.router.navigate(['/setting/']);
+     
      /*this.router.navigate(['/faxrecord/']);*/
      // this.router.navigate(['/recordstable/']);
      

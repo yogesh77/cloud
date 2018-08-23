@@ -39,7 +39,7 @@ export class AppComponent implements OnInit
         // Use a language
         this.translate.use('en');*/
 
-        // this.router.navigate(['/login']);
-        this.router.navigate(['/email/']);
+        this.router.navigate(['/login']);
+        // this.router.navigate(['/email/']);
     }
 }

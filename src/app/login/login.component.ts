@@ -55,13 +55,13 @@ export class LoginComponent  {
     this.tokenService.setToken(loginResponse.jwt);
     console.log(this.tokenService.getToken());
        
-    /* this.router.navigate(['/main/']);*/
-     /*this.router.navigate(['/records/']);*/
+     // this.router.navigate(['/main/']);
+     // this.router.navigate(['/records/']);
      this.router.navigate(['/email/']);
-     /*this.router.navigate(['/setting/']);*/
-     /*this.router.navigate(['/accounts/']);*/
+     // this.router.navigate(['/setting/']);
+     // this.router.navigate(['/accounts/']);
      /*this.router.navigate(['/faxrecord/']);*/
-     /*this.router.navigate(['/recordstable/']);*/
+     // this.router.navigate(['/recordstable/']);
      
      
     /*this.router.navigate(['/menu/']);*/

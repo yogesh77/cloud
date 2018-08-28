@@ -14,6 +14,22 @@ import { MainmenuComponent } from './mainmenu/mainmenu.component';
 
 export const routes: Routes = [
 
+{ path: '', component: LoginComponent },
+{ path: 'login/:token', component: LoginComponent },
+{ path: 'login/:token/:id', component: LoginComponent },
+{ path: 'login', component: LoginComponent },
+{ path: 'mainmenu', component: MainmenuComponent,
+
+// { path: 'mainmenu', component: MainmenuComponent,
+
+children:[
+
+{
+	path: 'dashboard',
+	component: DashboardComponent,
+
+},
+
 {
 	path: 'email',
     component: EmailComponent,    
@@ -24,16 +40,7 @@ export const routes: Routes = [
     component: LoginComponent,    
 },
 
-{
-	path: 'login',
-    component: LoginComponent,    
-},
 
-{
-	path: 'dashboard',
-	component: DashboardComponent,
-
-},
 {
 	path: 'records',
 	component: RecordsComponent,
@@ -74,8 +81,13 @@ export const routes: Routes = [
 {
 	path: 'mainmenu',
 	component: MainmenuComponent,
+},
+{
+        path: ' ',
+       redirectTo: 'mainmenu',
+      },
+],
 }
-
 ];
 
 export const AppRouterProviders = RouterModule.forRoot(routes);

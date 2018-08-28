@@ -1,19 +1,70 @@
 <div class="loaderBodyBG">
-<div class="heading">
-<h2>Clearfly</h2>
-</div>
+  <!-- <nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/email">E-mail</a>
+</nav> -->
+  <!-- <a routerLink="/mainmenu" (click)= "onMenuItemClick('mainmenu')"> h</a>
 
-<p-tabView (onChange)="onChange($event)" [activeIndex]="selectedIndex">    
-    <p-tabPanel header="dashboard" [selected]="true">
+						<router-outlet>
+                            
+                        </router-outlet> -->
+  <!-- <div class="fixed-header">
+    <div class="heading">
+    </div>
+
+    <p-tabView (onChange)="onChange($event)" [activeIndex]="selectedIndex" routerLink="/accounts/accounts">
+      <p-tabPanel header="dashboard" [selected]="true">
         Dashboard
-    </p-tabPanel>
-    <p-tabPanel header="accounts">
+      </p-tabPanel>
+      <p-tabPanel header="accounts">
         Accounts
-    </p-tabPanel>
-    <p-tabPanel header="email">
+        <ng-template pTemplate="content">
+           
+        </ng-template>
+      </p-tabPanel>
+      <p-tabPanel header="email">
         email
+      </p-tabPanel>
+    </p-tabView>
+  </div> -->
+
+  <p-tabView (onChange)="onChange($event)" [activeIndex]="selectedIndex">
+    <p-tabPanel header="Dashboard" [selected]="true">
+      Dashboard
     </p-tabPanel>
-</p-tabView>
+    <p-tabPanel header="Accounts">
+      Accounts
+    </p-tabPanel>
+    <p-tabPanel header="Email">
+      E-mail
+    </p-tabPanel>
+  </p-tabView>
+  <div class="col-md-9 wrapperRight">
+    <router-outlet>
+    </router-outlet>
+  </div>
+
+
+
+
+
+ <!--  <p-tabView>
+    <p-tabPanel header="Dashboard">
+        <ng-template pTemplate="content">
+            <a routerLink="/mainmenu/email" (click)="onMenuItemClick('dashboard')">Dashboard</a>
+        </ng-template>
+    </p-tabPanel>
+    <p-tabPanel header="Email">
+        <ng-template pTemplate="content">
+            <a routerLink="/mainmenu/email" (click)="onMenuItemClick('email')">Email</a>
+        </ng-template>
+    </p-tabPanel>
+    <router-outlet></router-outlet>
+</p-tabView> -->
+
+  
+  
+
+
 
 </div>
-

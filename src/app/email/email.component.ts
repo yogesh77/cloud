@@ -16,7 +16,7 @@ export class EmailComponent implements OnInit {
 	userList: any = [];
 	authorizedUserDetails:string;
 	addRecordError: any;
-  selectedIndex = 1;
+  
 
   @ViewChild(TabView) tabView: TabView; 
  
@@ -32,8 +32,7 @@ export class EmailComponent implements OnInit {
      	 	this.userlist.push(key);
      	 }
 
-  		
-  		// console.log("userdata",this.userdata);
+  		  		// console.log("userdata",this.userdata);
   	})
 
 
@@ -49,39 +48,11 @@ export class EmailComponent implements OnInit {
 
   submituserdetails(){
   	
-  	// this.email =this.authorizedUserDetails.emailAddress
+  	
   	this.loginService.adduserauthorization(this.authorizedUserDetails)
-  	// .then (() => this.onAddRecordSuccess(recordType))
-  	// .catch((error) => this.addRecordError = error._body);
+    this.display = false;
+  	
   }
-
-  // onAddRecordSuccess(recordType: string)){
-  // 	this.authorizedUserDetails.emailAddress = '';
-  // }
-
-  
-  // onChange($event) {   
-   
-  //   this.selectedIndex = $event.index;    
-  //   switch (this.selectedIndex) {
-  //     case 0: 
-  //     alert("dashboard");       
-  //       this.router.navigate(['/dashboard']);                  
-  //       break;
-  //     case 1: 
-  //       alert("accounts");
-  //     this.router.navigate(['/accounts']);     
-  //     default:
-  //     alert("hello");
-  //     break;
-  //   }
-
-  //   console.log(this.selectedIndex);
-  // }
-  
-  
-
-
 
   ngOnInit() {
 
@@ -90,16 +61,3 @@ export class EmailComponent implements OnInit {
 
 }
 
-// @Component({
-//   selector: 'first',
-//   template: '<p>first component</p>'
-// })
-// export class FirstComponent {
-//   constructor() {
-//     console.log('first component constructor');
-//   }
-  
-//   ngOnInit() {
-//     console.log('first component ngOnInit');
-//   }
-// }

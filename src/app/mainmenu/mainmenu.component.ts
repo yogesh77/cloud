@@ -29,7 +29,10 @@ onChange($event) {
       	break; 
       case 2:         
       	this.router.navigate(['/mainmenu/email']);
-      	break;  
+      	break; 
+      case 3:         
+        this.router.navigate(['/mainmenu/blocked']);
+        break; 
       default:
       alert("hello");
       break;

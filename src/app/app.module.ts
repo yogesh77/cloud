@@ -65,6 +65,7 @@ import { EmailComponent } from './email/email.component';
 import { DialogModule } from 'primeng/dialog';
 import { TabViewModule } from 'primeng/tabview';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
+import { BlockedComponent } from './blocked/blocked.component';
 
 @NgModule({
     declarations: [
@@ -80,6 +81,7 @@ import { MainmenuComponent } from './mainmenu/mainmenu.component';
         SettingComponent,
         EmailComponent,
         MainmenuComponent,
+        BlockedComponent,
         /*TableBasicExample,*/
         /*PeriodicElement*/
 

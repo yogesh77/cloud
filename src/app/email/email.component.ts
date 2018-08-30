@@ -16,11 +16,8 @@ export class EmailComponent implements OnInit {
 	userList: any = [];
 	authorizedUserDetails:string;
 	addRecordError: any;
-  
-
-  @ViewChild(TabView) tabView: TabView; 
+    
  
-
   constructor(private loginService: LoginService, private router: Router,) {
   	this.userlist = [];
   	this.loginService.showuserauthorization()
@@ -51,6 +48,18 @@ export class EmailComponent implements OnInit {
   	
   	this.loginService.adduserauthorization(this.authorizedUserDetails)
     this.display = false;
+       this.userlist = [];
+    this.loginService.showuserauthorization()
+    .then((res) => {
+      this.userdetails = JSON.parse(res._body);
+      
+        this.userdata = this.userdetails.authorization;
+        for (let key in this.userdata[0]){
+          this.userlist.push(key);
+        }
+
+            // console.log("userdata",this.userdata);
+    })
   	
   }
 

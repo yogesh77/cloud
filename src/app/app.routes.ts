@@ -11,6 +11,7 @@ import { RecordsComponent } from './records/records.component';
 import { SettingComponent } from './setting/setting.component';
 import { EmailComponent } from './email/email.component';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
+import { BlockedComponent } from './blocked/blocked.component';
 
 export const routes: Routes = [
 
@@ -27,6 +28,12 @@ children:[
 {
 	path: 'dashboard',
 	component: DashboardComponent,
+
+},
+
+{
+	path: 'blocked',
+	component: BlockedComponent,
 
 },
 

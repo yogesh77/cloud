@@ -28,22 +28,24 @@
     </p-tabView>
   </div> -->
 
-  <p-tabView (onChange)="onChange($event)" 
-  [activeIndex]="selectedIndex">
-    <p-tabPanel header="Dashboard" [selected]="true">
-      
-    </p-tabPanel>
-    <p-tabPanel header="Accounts">
-      
-    </p-tabPanel>
-    <p-tabPanel header="Email">
-      
-    </p-tabPanel>
-  </p-tabView>
-  <div class="col-md-9 wrapperRight">
-    <router-outlet>
-    </router-outlet>
+  <nav class="">
+  <div class="container-fluid">
+    <p-tabView (onChange)="onChange($event)" [activeIndex]="selectedIndex">
+      <p-tabPanel header="Dashboard" [selected]="true">
+      </p-tabPanel>
+      <p-tabPanel header="Accounts">
+      </p-tabPanel>
+      <p-tabPanel header="Email">
+      </p-tabPanel>
+      <p-tabPanel header="Blocked Numbers">
+      </p-tabPanel>
+    </p-tabView>
+    <div class="col-md-9 wrapperRight">
+      <router-outlet>
+      </router-outlet>
+    </div>
   </div>
+</nav>
 
 
 

@@ -166,8 +166,39 @@ export class LoginService{
      }
 
     handleError(eve: string){
-      console.log("eve",eve)
+      // console.log("eve",eve)
      }
 
+
+     getAuthorized() : Promise<any> {
+
+       const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/blocks";
+       const token : string = this.tokenService.getToken();
+       const headers = new Headers();
+       headers.append('Authorization', 'Bearer ' + token);
+       headers.append('Content-Type', 'application/json');
+       return this.http.get(url, { headers })       
+      .toPromise()
+      .then()
+      .catch(this.handleError);
+
+
+     }
+
+     addBlockedNumber(recordData: string) : Promise<any> {
+
+       const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/blocks/add";
+       const token : string = this.tokenService.getToken();
+       const headers = new Headers();
+       headers.append('Authorization', 'Bearer ' + token);
+       headers.append('Content-Type', 'application/json');
+       // return this.http.get(url, { headers })
+       return this.http.post(url, JSON.stringify({'number': recordData}), { headers })
+      .toPromise()
+      .then()
+      .catch(this.handleError);
+
+
+     }
 }
 

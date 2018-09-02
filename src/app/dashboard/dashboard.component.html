@@ -1,6 +1,19 @@
 <div class="loaderBodyBG">
-<p>
-  Dashboard..!
-</p>
+    <p>
+        Your bucket list ({{ itemCount }})
+        <br>
+        <input type="submit" [value]="btnText">
+        <br>
+        <input type="submit" value="{{ btnText }}">
+        <!-- To: -->
+        <input type="text" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
+
+        <br><span>{{ goalText }}</span>
+
+        <input type="submit"  value="{{ btnText }}" (click)="addItem()">
+        
+        <br>
+    </p>
 </div>
+
 

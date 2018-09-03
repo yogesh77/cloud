@@ -12,6 +12,7 @@ import { SettingComponent } from './setting/setting.component';
 import { EmailComponent } from './email/email.component';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { BlockedComponent } from './blocked/blocked.component';
+import { EmailsettingsComponent } from './emailsettings/emailsettings.component';
 
 export const routes: Routes = [
 
@@ -40,6 +41,11 @@ children:[
 {
 	path: 'email',
     component: EmailComponent,    
+},
+
+{
+	path: 'emailsettings',
+    component: EmailsettingsComponent,    
 },
 
 {

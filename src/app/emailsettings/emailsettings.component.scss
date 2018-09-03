@@ -1,0 +1,211 @@
+.title-grid .circle:after {
+    font-family: 'Glyphicons Halflings';
+    content: '\2212';
+    color: white!important;
+    text-align: center;
+    font-size: 9px;
+}
+.title-grid .circle.collapsed:after {
+    content: '\002b';
+    color: white!important;
+    text-align: center;
+    font-size: 9px;
+}
+
+.footer {
+    margin-top: 20px!important;
+}
+
+.mat-input-container {
+    width: 100%;
+}
+.recordSpineer {
+    z-index: 1!important;
+    top: 90%!important;
+}
+.emailAction{
+text-align: -moz-center!important;
+  text-align: -ms-center!important;
+  text-align: -webkit-center!important;
+  text-align: center!important;
+}
+.deleteBtn {
+    color: #C9302C;
+}
+
+.color {
+    color: rgba(0, 0, 0, .54)!important;
+    font-weight: 900;
+    font-size: 13px;
+    text-align: center;
+}
+.failed {
+    color: #C9302C;
+    text-align: center!important;
+    text-align: -ms-center!important;
+    text-align: -webkit-center!important;
+    text-align: -moz-center!important;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.cardPadding{
+    padding-top: 4px;
+}
+.record_search{
+    text-align: center!important;
+    text-align: -ms-center!important;
+    text-align: -webkit-center!important;
+    text-align: -moz-center!important;
+}
+.receiver{
+    font-weight: 500;
+    font-size: 16px;
+}
+.center{
+    text-align: center;
+}
+.padding{
+    padding: 15px;
+}
+.pwdIcon {
+    margin-top: 15px!important;
+}
+
+#alertBox {
+    padding: 0px;
+    color: red;
+}
+
+.settings-box {
+    clear: both;
+    border-top: 1px solid silver;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.settings-box-content {
+    padding-top: 10px;
+    margin-left: 25px;
+}
+
+mat-card {
+    margin-top: 15px;
+}
+
+mat-card-content {
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.authButton {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: right;
+    color: #6fb43f;
+}
+.recButton {
+    margin-bottom: 10px;
+    margin-top: -30px;
+    float: right;
+    color: #6fb43f;
+}
+
+.passEyecol {
+    position: relative;
+}
+
+.deleteBtn {
+    color: #C9302C;
+}
+
+.passEye {
+    position: absolute;
+    top: 0px;
+    right: 23px;
+}
+
+.authBtn {
+    color: #6fb43f;
+}
+
+.al {
+    text-overflow: ellipsis;
+    width: 12em;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.al .tooltiptext {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    padding-right: 4px;
+    padding-left: 4px;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+    display: block;
+    word-break: break-word;
+    width: auto;
+    white-space: normal;
+    word-break: break-all;
+}
+
+.al .tooltiptext::after {
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.al:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.display thead tr th {
+    width: 33% !important;
+}
+
+.emailHeading {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#settingTab {
+    background: #efefef;
+    width: 100%;
+    font-size: 12px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.label-success {
+    font-size: 12px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.text-truncate {
+    display:inline-block;
+    width:180px;
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+  }

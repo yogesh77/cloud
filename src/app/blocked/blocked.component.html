@@ -16,9 +16,12 @@
             </ng-template>
             <ng-template pTemplate="body" let-value>
               <tr>
-                <td *ngFor="let userList of userlist">
-                  {{value[userList]}}
-                  <!-- *ngIf="userList==username -->
+                <td *ngFor="let userList of userlist"> 
+                {{value[userList]}}                
+                  <!-- <div *ngIf userList != 'matchCsid' && userList != 'matchAni'>
+                    {{value[userList]}} 
+                  </div>
+                  <div *ngIf userList = 'matchCsid' && userList != 'matchAni' ></div> -->
                 </td>
               </tr>
             </ng-template>

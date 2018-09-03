@@ -66,6 +66,8 @@ import { DialogModule } from 'primeng/dialog';
 import { TabViewModule } from 'primeng/tabview';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { BlockedComponent } from './blocked/blocked.component';
+import { EmailsettingsComponent } from './emailsettings/emailsettings.component';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 
 @NgModule({
     declarations: [
@@ -82,6 +84,7 @@ import { BlockedComponent } from './blocked/blocked.component';
         EmailComponent,
         MainmenuComponent,
         BlockedComponent,
+        EmailsettingsComponent,
         /*TableBasicExample,*/
         /*PeriodicElement*/
 
@@ -115,7 +118,7 @@ import { BlockedComponent } from './blocked/blocked.component';
     MatListModule, MatToolbarModule, MatSidenavModule, MatPaginatorModule, MatSortModule,
     CardModule, DropdownModule,
 
-    DialogModule, TabViewModule
+    DialogModule, TabViewModule, ToggleButtonModule
 
     ],
     bootstrap   : [

@@ -30,14 +30,17 @@
 
   <nav class="">
   <div class="container-fluid">
-    <p-tabView (onChange)="onChange($event)" [activeIndex]="selectedIndex">
+    <p-tabView (onChange)="onChange($event)" 
+    [activeIndex]="selectedIndex">
       <p-tabPanel header="Dashboard" [selected]="true">
       </p-tabPanel>
-      <p-tabPanel header="Accounts">
+      <p-tabPanel header="Accounts" >
       </p-tabPanel>
-      <p-tabPanel header="Email">
+      <p-tabPanel header="Account Authorization">
       </p-tabPanel>
       <p-tabPanel header="Blocked Numbers">
+      </p-tabPanel>
+      <p-tabPanel header="Email Settings">
       </p-tabPanel>
     </p-tabView>
     <div class="col-md-9 wrapperRight">

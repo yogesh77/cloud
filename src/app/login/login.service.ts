@@ -153,7 +153,7 @@ export class LoginService{
      }
 
      showuserauthorization(): Promise<any> {
-       const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/authorizations";
+       const url = this.API_END_POINT+ 'accounts/1/authorizations';
        const token : string = this.tokenService.getToken();
        const headers = new Headers({ Authorization: 'Bearer ' + token });
        return this.http.get(url, { headers })
@@ -172,7 +172,8 @@ export class LoginService{
 
      getAuthorized() : Promise<any> {
 
-       const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/blocks";
+       // const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/blocks";
+       const url = this.API_END_POINT+ 'accounts/1/blocks';       
        const token : string = this.tokenService.getToken();
        const headers = new Headers();
        headers.append('Authorization', 'Bearer ' + token);
@@ -200,5 +201,34 @@ export class LoginService{
 
 
      }
+
+     showEmailReceiver() : Promise<any> {
+
+       const url = this.API_END_POINT + 'accounts/1/receivers';
+       // const url = 'https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/receivers';
+       const token : string = this.tokenService.getToken();
+       const headers = new Headers();
+       headers.append('Authorization', 'Bearer ' + token);
+       headers.append('Content-Type', 'application/json');
+       return this.http.get(url, { headers })       
+      .toPromise()
+      .then()
+      .catch(this.handleError);
+     }
+
+      deleteuserauthorization(recordType: string) : Promise<any> {
+       const url = this.API_END_POINT + 'accounts/1/authorizations';       
+       const token : string = this.tokenService.getToken();
+       const headers = new Headers();
+       headers.append('Authorization', 'Bearer ' + token);
+       headers.append('Content-Type', 'application/json');
+       return this.http.delete(url, { headers })       
+      .toPromise()
+      .then()
+      .catch(this.handleError);
+
+      }
+
+
 }
 

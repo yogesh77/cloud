@@ -20,8 +20,7 @@ onChange($event) {
    
     this.selectedIndex = $event.index;    
     switch (this.selectedIndex) {
-      case 0: 
-      // alert("dashboard");       
+      case 0:             
         this.router.navigate(['/mainmenu/dashboard']);                  
         break;
       case 1:         
@@ -32,9 +31,12 @@ onChange($event) {
       	break; 
       case 3:         
         this.router.navigate(['/mainmenu/blocked']);
-        break; 
+        break;
+      case 4:
+        this.router.navigate(['/mainmenu/emailsettings']); 
+        break;     
       default:
-      alert("hello");
+      alert("Please Select");
       break;
     }
 

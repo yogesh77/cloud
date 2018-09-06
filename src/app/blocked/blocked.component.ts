@@ -24,9 +24,9 @@ export class BlockedComponent implements OnInit {
   			this.userdetails = JSON.parse(res._body);
   			this.userdata = this.userdetails.blockedNumber;
 
-  			for (let key in this.userdata[0]){
-  				this.userlist.push(key);
-  			}
+  			// for (let key in this.userdata[0]){
+  			// 	this.userlist.push(key);
+  			// }
   			console.log(this.userdetails);
   			console.log(this.userdata);
   	})

@@ -16,6 +16,8 @@ export class DashboardComponent implements OnInit{
 
 	 goals = [];
 
+   show: boolean = true;
+
 	 ngOnInit() {
     this.itemCount = this.goals.length;
 

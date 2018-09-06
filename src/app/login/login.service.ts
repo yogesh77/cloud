@@ -216,8 +216,8 @@ export class LoginService{
       .catch(this.handleError);
      }
 
-      deleteuserauthorization(recordType: string) : Promise<any> {
-       const url = this.API_END_POINT + 'accounts/1/authorizations';       
+      deleteuserauthorization() : Promise<any> {
+       const url = this.API_END_POINT + 'accounts/1/authorizations/11';       
        const token : string = this.tokenService.getToken();
        const headers = new Headers();
        headers.append('Authorization', 'Bearer ' + token);

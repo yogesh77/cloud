@@ -1,58 +1,55 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <div class="loaderBodyBG">
   <div class="container">
     <h2>Authorization</h2>
     <div class="row">
-    
-    
-
-    <div class="panel-body col-sm-9">
-      <p-card>
-        <p-table [value]="userdata">
-          <ng-template pTemplate="header">
-            <tr>
-              <th>ID</th>
-              <th>E-mail</th>
-            </tr>
-          </ng-template>
-          <ng-template pTemplate="body" let-value>
-            <tr>
-              <td *ngFor="let userList of userlist">
-                {{value[userList]}}
-                <!-- *ngIf="userList==username -->
-              </td>
-            </tr>
-          </ng-template>
-        </p-table>
-      </p-card>
+      <div class="panel-body col-sm-9">
+        <div class="spinner" *ngIf="loading">
+          <p-progressSpinner></p-progressSpinner>
+        </div>
+        <p-card *ngIf="!loading">
+          <p-table [value]="userdata">
+            <ng-template pTemplate="header">
+              <tr>                
+                <!-- <th *ngFor="let userList of userlist">
+                {{userList}}
+                </th> -->                
+                <th>Username</th>
+                <th>Action</th>                
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-value>
+              <tr *ngFor="let user of userdata">
+                <td >
+                  {{user.username}}                  
+                </td>
+                <td><i class="fa fa-trash-o gap-between-elements deleteBtn cursor" aria-hidden="true" (click) = "deleteuserprofile()"></i></td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </p-card>
+      </div>
+      <div class="col-sm-3">
+        <p-card class="displaybox">
+          <button (click)="showDialog()">
+            <i class="fa fa-plus authBtn" aria-hidden="true"></i> Add Authorization
+          </button>
+          <p-dialog header="Add authorization" [(visible)]="display">
+            <input type="text" name="email" placeholder="Enter E-mail" (focus)="focus()" [(ngModel)]="authorizedUserDetails">
+            <div>
+              <button name="button" (click)="submituserdetails()">Add</button>
+              
+            </div>
+          </p-dialog>
+        </p-card>
+      </div>
     </div>
-
-    <div class="col-sm-3">
-      <p-card class="displaybox">
-        <button (click)="showDialog()">
-          <i class="fa fa-plus authBtn" aria-hidden="true"></i> Add Authorization
-        </button>
-        <p-dialog header="Add authorization" [(visible)]="display">
-          <input type="text" name="email" placeholder="Enter E-mail"
-           (focus)="focus()" [(ngModel)]="authorizedUserDetails"
-          >
-          <div>
-          <button name ="button" (click)="submituserdetails()">Add</button>
-          <!-- <button type="button" pButton icon="pi pi-close" 
-          (click)="submituserdetails" label="Add" class="ui-button-secondary"></button> -->
-          </div>
-        </p-dialog>
-      </p-card>
-    </div>
-
-  </div>
-
-<!-- <p-tabView> -->
-<!-- <button pButton (click)="getSelectedHeader()" label="selected header">  
+    <!-- <p-tabView> -->
+    <!-- <button pButton (click)="getSelectedHeader()" label="selected header">  
 </button> -->
-
-<!-- <p-tabView (onChange)="onChange($event)" [activeIndex]="selectedIndex">    
+    <!-- <p-tabView (onChange)="onChange($event)" [activeIndex]="selectedIndex">    
     <p-tabPanel header="dashboard" [selected]="true">
         Dashboard
     </p-tabPanel>
@@ -60,6 +57,5 @@
         Accounts
     </p-tabPanel>
 </p-tabView> -->
-
-</div>
+  </div>
 </div>

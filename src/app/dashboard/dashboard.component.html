@@ -1,19 +1,24 @@
 <div class="loaderBodyBG">
-    <p>
-        Your bucket list ({{ itemCount }})
-        <br>
-        <input type="submit" [value]="btnText">
-        <br>
-        <input type="submit" value="{{ btnText }}">
-        <!-- To: -->
-        <input type="text" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
+  <p>
+    Your bucket list ({{ itemCount }})
+    <br>
+    <input type="submit" [value]="btnText">
+    <br>
+    <input type="submit" value="{{ btnText }}">
+    <!-- To: -->
+    <input type="text" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
+    <br><span>{{ goalText }}</span>
 
-        <br><span>{{ goalText }}</span>
+    <input type="submit" value="{{ btnText }}" (click)="addItem()">
+  </p>
 
-        <input type="submit"  value="{{ btnText }}" (click)="addItem()">
-        
-        <br>
-    </p>
+    <button (click)="show = !show">
+
+    {{show ? 'Hide' : 'show'}}</button>
+    
+    <!-- show = {{show}} -->
+    <br>
+    
+    <div *ngIf="show">Text to show</div>  
+
 </div>
-
-

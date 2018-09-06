@@ -27,3 +27,7 @@
 .authBtn {
     color: #6fb43f;
 }
+.spinner {
+  position: absolute!important;
+  807 top: 40%!important;
+}

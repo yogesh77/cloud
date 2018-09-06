@@ -32,11 +32,11 @@
   <div class="container-fluid">
     <p-tabView (onChange)="onChange($event)" 
     [activeIndex]="selectedIndex">
-      <p-tabPanel header="Dashboard" [selected]="true">
+      <p-tabPanel header="Dashboard">
       </p-tabPanel>
       <p-tabPanel header="Accounts" >
       </p-tabPanel>
-      <p-tabPanel header="Account Authorization">
+      <p-tabPanel header="Account Authorization" [selected]="true">
       </p-tabPanel>
       <p-tabPanel header="Blocked Numbers">
       </p-tabPanel>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login/login.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,14 +15,43 @@ export class DashboardComponent implements OnInit{
 
 	 goalText: string = 'My first life goal';    // Add this
 
+   heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+
 	 goals = [];
 
    show: boolean = true;
 
-	 ngOnInit() {
-    this.itemCount = this.goals.length;
+   Email: string;
+   Password: string;
+   Mobile: string;
+   Firstname: string;
+   Lastname: string;
+   Studentclass: string;
+   Gender: string;
+   registration: any;
 
-	 console.log(this.itemCount);
+   
+   
+   constructor(public loginService: LoginService){
+     
+     // this.loginService.sendemail(this.registration);
+
+        }
+
+   
+   signup(){
+ this.registration = {"email":this.Email, "password":this.Password, "mobile":this.Mobile,
+    "firstname":this.Firstname,"lastname":this.Lastname,"class":this.Studentclass,"gender":this.Gender}
+
+
+         this.loginService.sendemail(this.registration);
+         // console.log(this.loginService.sendemail(this.registration));
+   }
+
+	 ngOnInit() {
+  //   this.itemCount = this.goals.length;
+
+	 // console.log(this.itemCount);
   }
 
 addItem() {
@@ -30,6 +60,8 @@ addItem() {
     this.itemCount = this.goals.length;
      console.log(this.itemCount);
   }
+
+  
   }
 
 

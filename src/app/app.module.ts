@@ -69,6 +69,8 @@ import { BlockedComponent } from './blocked/blocked.component';
 import { EmailsettingsComponent } from './emailsettings/emailsettings.component';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 
+
+
 @NgModule({
     declarations: [
         AppComponent,

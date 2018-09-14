@@ -1,11 +1,11 @@
 <div class="loaderBodyBG">
-  <p>
+  <!-- <p>
     Your bucket list ({{ itemCount }})
     <br>
     <input type="submit" [value]="btnText">
     <br>
     <input type="submit" value="{{ btnText }}">
-    <!-- To: -->
+    
     <input type="text" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
     <br><span>{{ goalText }}</span>
 
@@ -14,11 +14,38 @@
 
     <button (click)="show = !show">
 
-    {{show ? 'Hide' : 'show'}}</button>
+    {{show ? 'Hide' : 'show'}}</button>    
     
-    <!-- show = {{show}} -->
     <br>
     
     <div *ngIf="show">Text to show</div>  
+
+
+    <p-dropdown [options]="cities1" [(ngModel)]="selectedCity1"></p-dropdown>
+
+    <ul>Array of Angular
+    <li *ngFor="let hero of heroes">
+      {{ hero }}
+    </li>
+  </ul> -->
+
+
+<p-card>
+
+<div>Email:<input type="text" pInputText [(ngModel)]="Email"/></div>
+<!-- {{Email}} -->
+<div>Password:<input type="password" pPassword  [(ngModel)]="Password"/></div>
+
+<div>Mobile:<input type="text" pInputText [(ngModel)]="Mobile"/>
+</div>
+<div>FirstName:<input type="text" pInputText [(ngModel)]="Firstname"/></div>
+<div>Lastname:<input type="text" pInputText [(ngModel)]="Lastname"/></div>
+<div>Class:<input type="text" pInputText [(ngModel)]="Studentclass"/></div>
+<div>Gender:<input type="text" pInputText [(ngModel)]="Gender"/></div>
+
+<button pButton type="button" label="Submit" (click)= signup()>
+    
+</button>
+</p-card>
 
 </div>

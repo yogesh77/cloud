@@ -229,16 +229,19 @@ export class LoginService{
 
       }
 
-      sendemail(obj) : Promise<any> {
+      userregistration(obj) : Promise<any> {
         const url = "http://scripts.olympiadbox.com/services/fronty-api/user/register";        
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Olympiadbox-Api-Key','36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88');
         return this.http.post(url, JSON.stringify(obj),{ headers })       
         .toPromise()
-        .then()
+        // .then()
+        .then((res) => {return res;})
         .catch(this.handleError);
       }
+
+      
 
 }
 

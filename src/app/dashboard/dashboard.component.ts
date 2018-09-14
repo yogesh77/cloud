@@ -40,14 +40,17 @@ export class DashboardComponent implements OnInit{
 
    
    signup(){
+
  this.registration = {"email":this.Email, "password":this.Password, "mobile":this.Mobile,
     "firstname":this.Firstname,"lastname":this.Lastname,"class":this.Studentclass,"gender":this.Gender}
 
 
-         this.loginService.sendemail(this.registration);
-         // console.log(this.loginService.sendemail(this.registration));
+         this.loginService.userregistration(this.registration)
+         .then((res => {console.log(res);} ))
+         .catch(this.handleError());
+         
    }
-
+handleError(){}
 	 ngOnInit() {
   //   this.itemCount = this.goals.length;
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login/login.service';
 import * as moment from 'moment';
-import * as FileSaver from 'file-saver';
+
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
 
@@ -77,7 +77,7 @@ downloadFile(data: any) {
     this.faxRecordsBlobData = new Blob( [data], { type: 'text/csv' }
       );
     console.log('fax'+this.faxRecordsBlobData);
-    FileSaver.saveAs( this.faxRecordsBlobData, 'Fax Records' + '.csv' );
+    // FileSaver.saveAs( this.faxRecordsBlobData, 'Fax Records' + '.csv' );
     }
 
 recordDownlaod() {

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login/login.service';
+import { Observable } from "rxjs/Observable"
+
 
 @Component({
   selector: 'app-dashboard',
@@ -21,14 +23,23 @@ export class DashboardComponent implements OnInit{
 
    show: boolean = true;
 
-   Email: string;
-   Password: string;
-   Mobile: string;
-   Firstname: string;
-   Lastname: string;
-   Studentclass: string;
-   Gender: string;
+   // Email: string;
+   // Password: string;
+   // Mobile: string;
+   // Firstname: string;
+   // Lastname: string;
+   // Studentclass: string;
+   // Gender: string;
    registration: any;
+
+   Email: string = 'smirnov@sendfax.io';
+   Password: string = '123456';
+   Mobile: string = '9874563210';
+   Firstname: string = 'kolo';
+   Lastname: string = 'lolo'
+   Studentclass: string = 'I';
+   Gender: string = 'Male';
+   
 
    
    
@@ -46,8 +57,8 @@ export class DashboardComponent implements OnInit{
 
 
          this.loginService.userregistration(this.registration)
-         .then((res => {console.log(res);} ))
-         .catch(this.handleError());
+         .then((res => {console.log(res._body);} ))
+         .catch((error) => this.handleError());
          
    }
 handleError(){}

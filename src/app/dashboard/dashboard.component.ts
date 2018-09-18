@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login/login.service';
-import { Observable } from "rxjs/Observable"
-
 
 @Component({
   selector: 'app-dashboard',
@@ -31,15 +29,17 @@ export class DashboardComponent implements OnInit{
    // Studentclass: string;
    // Gender: string;
    registration: any;
+   userverification: any;
 
-   Email: string = 'smirnov@sendfax.io';
+   Email: string = 'yatagiwoxa@zippiex.com';
    Password: string = '123456';
    Mobile: string = '9874563210';
    Firstname: string = 'kolo';
    Lastname: string = 'lolo'
    Studentclass: string = 'I';
    Gender: string = 'Male';
-   
+   mail: boolean = false;
+   mobile: boolean = false;
 
    
    
@@ -56,8 +56,15 @@ export class DashboardComponent implements OnInit{
     "firstname":this.Firstname,"lastname":this.Lastname,"class":this.Studentclass,"gender":this.Gender}
 
 
-         this.loginService.userregistration(this.registration)
-         .then((res => {console.log(res._body);} ))
+         this.loginService.userregistration(this.registration) 
+         // this.loginService.registrationemail(this.Email)        
+
+         .then((res) => {
+           console.log(res);
+           this.emailverfication();
+         })
+         // .then((res => {console.log(res._body.message);} ))
+         // .then((res => alert('hello'+ res._body) ))
          .catch((error) => this.handleError());
          
    }
@@ -73,6 +80,19 @@ addItem() {
     this.goalText = '';
     this.itemCount = this.goals.length;
      console.log(this.itemCount);
+  }
+
+  emailverfication(){
+
+    this.userverification = {'email': this.Email, 'verify_mobile': this.mobile, 'verify_email': this.mail}
+
+    this.loginService.registrationemail(this.userverification)
+
+         .then((res) => {console.log(res);})
+         // .then((res => {console.log(res._body.message);} ))
+         // .then((res => alert('hello'+ res._body) ))
+         .catch((error) => this.handleError());
+
   }
 
   

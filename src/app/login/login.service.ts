@@ -11,6 +11,7 @@ export class LoginService{
 	public accountDetail:string;
 	constructor(private http: Http, private tokenService: TokenService) {}
 
+  API_END_POINTS = 'http://scripts.olympiadbox.com/services/fronty-api/';
 	API_END_POINT = 'https://cfax-sandbox.clearfly.net/cfax/rest/';
 	URL = "https://cfax-sandbox.clearfly.net/cfax/rest/aaa/login?rememberMe=true";
 	accountUrl = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/products";
@@ -230,18 +231,33 @@ export class LoginService{
       }
 
       userregistration(obj) : Promise<any> {
-        const url = "http://scripts.olympiadbox.com/services/fronty-api/user/register";        
+        // const url = "http://scripts.olympiadbox.com/services/fronty-api/user/register";        
+        const url = this.API_END_POINTS + 'user/register';
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Olympiadbox-Api-Key','36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88');
         return this.http.post(url, JSON.stringify(obj),{ headers })       
         .toPromise()
-        // .then()
-        .then((res) => {return res;})
+        .then()
+        // .then((res) => {return res;})
         .catch(this.handleError);
-      }
+      }  
 
-      
+      registrationemail(obj) : Promise<any> {
+        // const url = "http://scripts.olympiadbox.com/services/fronty-api/otp/generate";        
+        const url = this.API_END_POINTS + 'otp/generate';
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Olympiadbox-Api-Key','36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88');
+        // console.log("emailvalue", JSON.stringify({'email':obj}));       
+        // return this.http.post(url, JSON.stringify({'email': obj,'verify_mobile':false,'verify_email': true}),{ headers })       
+        console.log("emailvalue", JSON.stringify(obj)); 
+        return this.http.post(url, JSON.stringify(obj),{ headers })       
+        .toPromise()        
+        .then()
+        // .then((res) => {return res;})
+        .catch(this.handleError);
+      }  
 
 }
 

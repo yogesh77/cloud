@@ -1,3 +1,4 @@
+ 
 <div class="loaderBodyBG">
   <!-- <p>
     Your bucket list ({{ itemCount }})
@@ -31,21 +32,52 @@
 
 
 <p-card>
-
-<div>Email:<input type="text" pInputText [(ngModel)]="Email"/></div>
-<!-- {{Email}} -->
-<div>Password:<input type="password" pPassword  [(ngModel)]="Password"/></div>
-
-<div>Mobile:<input type="text" pInputText [(ngModel)]="Mobile"/>
+<div class="container ">
+<div class="row">
+Email:<input type="text" pInputText [(ngModel)]="Email"/>
 </div>
-<div>FirstName:<input type="text" pInputText [(ngModel)]="Firstname"/></div>
-<div>Lastname:<input type="text" pInputText [(ngModel)]="Lastname"/></div>
-<div>Class:<input type="text" pInputText [(ngModel)]="Studentclass"/></div>
-<div>Gender:<input type="text" pInputText [(ngModel)]="Gender"/></div>
+<!-- {{Email}} -->
+<div class="row" >
+Password:<input type="password" pPassword  [(ngModel)]="Password"/></div>
 
-<button pButton type="button" label="Submit" (click)= signup()>
-    
+<div class="row">
+
+Mobile:<input type="text" pInputText [(ngModel)]="Mobile"/>
+
+</div>
+
+<div class="row">
+FirstName:<input type="text" pInputText [(ngModel)]="Firstname"/>
+</div>
+
+<div class="row">
+Lastname:<input type="text" pInputText [(ngModel)]="Lastname"/>
+</div>
+
+<div class="row">
+Class:<input type="text" pInputText [(ngModel)]="Studentclass"/>
+</div>
+
+<div class="row">
+Gender:<input type="text" pInputText [(ngModel)]="Gender"/>
+</div>
+
+<div class="row">
+Select verficiation mode : E-mail
+<div class="col-sm-4">
+<p-toggleButton [(ngModel)]="mail"></p-toggleButton>
+<!-- {{mail}} -->
+
+Mobile<p-toggleButton [(ngModel)]="mobile"></p-toggleButton>
+
+</div>
+</div>
+
+
+<button pButton type="button" label="Submit" (click)= signup()>   
 </button>
+
+</div>
 </p-card>
 
 </div>

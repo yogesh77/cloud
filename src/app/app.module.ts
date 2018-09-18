@@ -68,6 +68,7 @@ import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { BlockedComponent } from './blocked/blocked.component';
 import { EmailsettingsComponent } from './emailsettings/emailsettings.component';
 import { ToggleButtonModule } from 'primeng/togglebutton';
+import { ToastModule } from 'primeng/toast';
 
 
 
@@ -120,7 +121,7 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
     MatListModule, MatToolbarModule, MatSidenavModule, MatPaginatorModule, MatSortModule,
     CardModule, DropdownModule,
 
-    DialogModule, TabViewModule, ToggleButtonModule
+    DialogModule, TabViewModule, ToggleButtonModule, ToastModule
 
     ],
     bootstrap   : [

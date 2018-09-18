@@ -21,6 +21,8 @@ export class DashboardComponent implements OnInit{
 
    show: boolean = true;
 
+
+
    // Email: string;
    // Password: string;
    // Mobile: string;
@@ -41,8 +43,10 @@ export class DashboardComponent implements OnInit{
    mail: boolean = false;
    mobile: boolean = false;
 
-   
-   
+   // selectedValues: string[] = ['userEmail','userMobile'];
+
+   selectedValues: boolean = false;    
+
    constructor(public loginService: LoginService){
      
      // this.loginService.sendemail(this.registration);
@@ -84,7 +88,8 @@ addItem() {
 
   emailverfication(){
 
-    this.userverification = {'email': this.Email, 'verify_mobile': this.mobile, 'verify_email': this.mail}
+    // this.userverification = {'email': this.Email, 'verify_mobile': this.mobile, 'verify_email': this.mail}
+    this.userverification = {'email': this.Email, 'verify_mobile': this.mobile, 'verify_email': this.selectedValues}    
 
     this.loginService.registrationemail(this.userverification)
 

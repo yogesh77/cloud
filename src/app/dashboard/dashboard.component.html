@@ -65,6 +65,7 @@ Gender:<input type="text" pInputText [(ngModel)]="Gender"/>
 <div class="row">
 Select verficiation mode : E-mail
 <div class="col-sm-4">
+
 <p-toggleButton [(ngModel)]="mail"></p-toggleButton>
 <!-- {{mail}} -->
 
@@ -73,9 +74,15 @@ Mobile<p-toggleButton [(ngModel)]="mobile"></p-toggleButton>
 </div>
 </div>
 
+<p-checkbox name="groupname" binary="true" label="Email"
+[(ngModel)]="selectedValues"> </p-checkbox>
 
-<button pButton type="button" label="Submit" (click)= signup()>   
-</button>
+<!-- {{selectedValues}} -->
+
+<!-- <p-checkbox name="groupname" value="userMobile" label="Mobile"
+[(ngModel)]="selectedValues"></p-checkbox>
+ -->
+<button pButton type="button" label="Submit" (click)= signup()></button>
 
 </div>
 </p-card>

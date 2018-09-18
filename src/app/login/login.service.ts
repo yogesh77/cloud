@@ -2,6 +2,7 @@ import 'rxjs/add/operator/toPromise';
 import { Inject, Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import { CookieService, TokenService, RefreshService } from '../app.service';
+import * as constant from '../../../conf/constant';
 
 @Injectable()
 
@@ -232,7 +233,7 @@ export class LoginService{
 
       userregistration(obj) : Promise<any> {
         // const url = "http://scripts.olympiadbox.com/services/fronty-api/user/register";        
-        const url = this.API_END_POINTS + 'user/register';
+        const url = constant.API_END_POINT + 'user/register';
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Olympiadbox-Api-Key','36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88');
@@ -245,7 +246,7 @@ export class LoginService{
 
       registrationemail(obj) : Promise<any> {
         // const url = "http://scripts.olympiadbox.com/services/fronty-api/otp/generate";        
-        const url = this.API_END_POINTS + 'otp/generate';
+        const url = constant.API_END_POINT + 'otp/generate';
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Olympiadbox-Api-Key','36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88');
@@ -254,8 +255,7 @@ export class LoginService{
         console.log("emailvalue", JSON.stringify(obj)); 
         return this.http.post(url, JSON.stringify(obj),{ headers })       
         .toPromise()        
-        .then()
-        // .then((res) => {return res;})
+        .then()        
         .catch(this.handleError);
       }  
 

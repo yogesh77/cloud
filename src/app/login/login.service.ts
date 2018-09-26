@@ -129,7 +129,7 @@ export class LoginService{
     displayrecord(): Promise<any> {    	
     const url = 'https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/records?start=2018-07-01&end=2018-07-31';    
     const token: string = this.tokenService.getToken();
-    const headers = new Headers({ Authorization: 'Bearer ' + token });
+    const headers = new Headers({ 'Authorization': 'Bearer ' + token });
        return this.http.get(url, { headers })
       .toPromise()
       .then((res) => res)
@@ -258,6 +258,37 @@ export class LoginService{
         .then()        
         .catch(this.handleError);
       }  
+
+      // newuserlogin(userName: string, password: string) : Promise<any> {        
+      //   const url = constant.API_END_POINT + 'user/login';
+      //   const headers = new Headers();
+      //   headers.append('Content-Type', 'application/json');
+      //   headers.append('Olympiadbox-Api-Key','36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88');                  
+      //   return this.http.post(url,{ headers })       
+      //   .toPromise()        
+      //   .then()        
+      //   .catch(this.handleError);
+      // } 
+
+      credentialsubmit(userName: string, password: string){
+      return this.post(userName, password);
+    }
+
+  //post method
+      newuserlogin(userName: string, password: string) : any{
+      const loginUrl = constant.API_END_POINT + 'user/login';
+      const headers = new Headers(   
+    { 'Content-Type' : 'application/json', 
+      // 'Olympiadbox-Api-Key': btoa(userName + ':' + password) });
+      'Olympiadbox-Api-Key': '36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88'});      
+       return this.http.post(loginUrl,JSON.stringify({'username': userName,'password':password}),{ headers })
+      .toPromise()
+      .then((response) => response)
+      .catch(this.handleError);      
+     }
+       
+       
+
 
 }
 

@@ -34,7 +34,10 @@ onChange($event) {
         break;
       case 4:
         this.router.navigate(['/mainmenu/emailsettings']); 
-        break;     
+        break; 
+      case 5:
+        this.router.navigate(['/mainmenu/userlogin']); 
+        break;      
       default:
       alert("Please Select");
       break;

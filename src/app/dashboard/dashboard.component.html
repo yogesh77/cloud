@@ -30,8 +30,14 @@
     </li>
   </ul> -->
 
+<!-- <input id="name" name="name" #name ="ngModel">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        <div *ngIf ="name.error"> Name required</div></div> -->
+
+
 
 <p-card>
+    
 <div class="container ">
 <div class="row">
 Email:<input type="text" pInputText [(ngModel)]="Email"/>
@@ -86,5 +92,47 @@ Mobile<p-toggleButton [(ngModel)]="mobile"></p-toggleButton>
 
 </div>
 </p-card>
+
+
+<input (keyup)="onKey($event)">
+<p>{{values}}</p>
+
+<!-- rewrite of above keyup event -->
+<!-- <input #box (keyup)= onKey(box.value)>Name:
+<p>{{values}}</p> -->
+
+<input #box (keyup)="0">Enter your Name:
+<p>{{box.value}}</p>
+
+<label>
+  Name:
+  <input type="text" [formControl]="name">
+</label>
+<button type="button" (click)="updateName()">Show</button>
+<p>
+  Value: {{ name.value }} {{name.status}}
+</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+  <div formGroupName="address">
+    <h3>Address</h3>
+    <label>
+      Street:
+      <input type="text" formControlName="street">
+    </label>
+  </div>
+  
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+
 
 </div>

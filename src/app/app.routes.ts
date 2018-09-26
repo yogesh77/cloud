@@ -13,6 +13,8 @@ import { EmailComponent } from './email/email.component';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { BlockedComponent } from './blocked/blocked.component';
 import { EmailsettingsComponent } from './emailsettings/emailsettings.component';
+import { UserloginComponent } from './userlogin/userlogin.component'
+
 
 export const routes: Routes = [
 
@@ -29,6 +31,12 @@ children:[
 {
 	path: 'dashboard',
 	component: DashboardComponent,
+
+},
+
+{
+	path: 'userlogin',
+	component: UserloginComponent,
 
 },
 

@@ -1,0 +1,58 @@
+.loaderBodyBG {
+    background-color: #ffffff;
+    z-index: 20;
+    height: 100%;
+    min-height: 550px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.box {
+    padding: 20px;
+    width: 600px;  
+    padding: 0 1.5em 0 1.5em;
+    box-sizing: border-box;
+
+}
+
+.username{
+ 
+    width: 300px;
+}
+
+.userpassword{
+    
+    width: 300px;
+}
+
+.center {
+    
+    width: 50%;
+    border: 1px;
+    background-color: #D3D3D3;
+    padding: 10px;
+}
+
+.boxcenter2 {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:50em;
+    height:18em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/    
+    // margin-left: -15em;
+    margin-left: -15em;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+}
+
+.datacenter { 
+    border: 1px;
+    padding: 5px;          
+    
+    
+}

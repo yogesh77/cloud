@@ -35,8 +35,12 @@ export class LoginComponent  {
 
      if (UserName == "ivan.smirnov@sendfax.io" && Password == "fooBar1" ){                  
      this.loginService.submit(UserName, Password)
-     .then((response) =>
-        this.onLoginSuccess(JSON.parse(response._body))) 
+     .then((response) =>{
+
+        this.onLoginSuccess(JSON.parse(response._body))
+        // console.log('chci' + response._body);
+      }) 
+     
       .catch((error) => this.showErrorOnFailedLogin()); 
       this.loading = true; 
      /*this.router.navigate(['/accounts/']);*/ 

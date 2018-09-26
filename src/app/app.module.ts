@@ -1,5 +1,6 @@
 import { NgModule, } from '@angular/core';
 import { FormsModule }    from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -69,7 +70,10 @@ import { BlockedComponent } from './blocked/blocked.component';
 import { EmailsettingsComponent } from './emailsettings/emailsettings.component';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { ToastModule } from 'primeng/toast';
-
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import { GrowlModule } from 'primeng/growl';
+import { UserloginComponent } from './userlogin/userlogin.component'
 
 
 @NgModule({
@@ -88,6 +92,7 @@ import { ToastModule } from 'primeng/toast';
         MainmenuComponent,
         BlockedComponent,
         EmailsettingsComponent,
+        UserloginComponent,
         /*TableBasicExample,*/
         /*PeriodicElement*/
 
@@ -121,7 +126,8 @@ import { ToastModule } from 'primeng/toast';
     MatListModule, MatToolbarModule, MatSidenavModule, MatPaginatorModule, MatSortModule,
     CardModule, DropdownModule,
 
-    DialogModule, TabViewModule, ToggleButtonModule, ToastModule
+    DialogModule, TabViewModule, ToggleButtonModule, ToastModule,
+    MessageModule,MessagesModule, GrowlModule, ReactiveFormsModule
 
     ],
     bootstrap   : [

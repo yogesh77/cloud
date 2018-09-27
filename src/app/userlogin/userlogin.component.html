@@ -1,28 +1,40 @@
-<div class="loaderBodyBG">
-  <div class="container box">
-  	<form class=".form-horizontal" [formGroup]="accountscredentials">
-    <div class="form-group boxcenter">
-    	<div class="row datacenter">
-    	<div class="col-sm-4">
-    		<h2>Login to your account</h2>
-    	</div>
+
+  <div class="loaderBodyBG">
+    <div *ngIf = "flag">
+    <div class="container box">
+      <form class=".form-horizontal" [formGroup]="accountscredentials">
+        <div class="form-group boxcenter">
+          <div class="row datacenter">
+            <div class="col-sm-4">
+              <h2>Login to your account</h2>
+            </div>
+          </div>
+          <div class="row datacenter">
+            <div class="col-sm-4 panel-body well">
+              <input type="text " placeholder="Enter username " class="form-control " pInputText [(ngModel)]='username' formControlName="userid" />
+            </div>
+          </div>
+          <div class="row datacenter">
+            <div class="col-sm-4 username well ">
+              <input type="text " class="form-control " placeholder="Password " type="password " pInputText [(ngModel)]='password' formControlName="userpassword" />
+            </div>
+          </div>
+          <div class="row datacenter well">
+            <div class="col-sm-4 userpassword">
+              <p-button label="Submit " (onClick)="login()" class=" "></p-button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- <router-outlet></router-outlet> -->
+      
     </div>
-      <div class="row datacenter">      	
-        <div class="col-sm-4 panel-body well">
-          <input type="text " placeholder="Enter username " class="form-control " pInputText [(ngModel)]='username' formControlName="userid" />
-        </div>
-      </div>
-      <div class="row datacenter">
-        <div class="col-sm-4 username well ">
-          <input type="text " class="form-control " placeholder="Password " type="password " pInputText [(ngModel)]='password' formControlName="userpassword" />
-        </div>
-      </div>
-      <div class="row datacenter well">
-        <div class="col-sm-4 userpassword">
-          <p-button label="Submit " (onClick)="login()" class=" "></p-button>
-        </div>
-      </div>
-    </div>
-</form>
+      
+
   </div>
+<div *ngIf="!flag">
+      <router-outlet></router-outlet>
+      </div>
 </div>
+

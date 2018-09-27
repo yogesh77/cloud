@@ -13,7 +13,8 @@ import { EmailComponent } from './email/email.component';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { BlockedComponent } from './blocked/blocked.component';
 import { EmailsettingsComponent } from './emailsettings/emailsettings.component';
-import { UserloginComponent } from './userlogin/userlogin.component'
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
 
 
 export const routes: Routes = [
@@ -37,6 +38,11 @@ children:[
 {
 	path: 'userlogin',
 	component: UserloginComponent,
+
+	children:[{
+		path: 'updateprofile',
+		component: UpdateprofileComponent
+	}]
 
 },
 
@@ -99,10 +105,7 @@ children:[
 	path: 'setting',
 	component: SettingComponent,
 },
-{
-	path: 'mainmenu',
-	component: MainmenuComponent,
-},
+
 {
         path: ' ',
        redirectTo: 'mainmenu',

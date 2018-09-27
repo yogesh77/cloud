@@ -9,8 +9,13 @@ import * as constant from '../../../conf/constant';
 export class LoginService{
 
 	account: string;
+  queryHeaders;
 	public accountDetail:string;
-	constructor(private http: Http, private tokenService: TokenService) {}
+	constructor(private http: Http, private tokenService: TokenService) {
+    
+    this.queryHeaders = new Headers();
+    this.queryHeaders.append('Session_token', localStorage.getItem('setToken'));
+  }
 
   API_END_POINTS = 'http://scripts.olympiadbox.com/services/fronty-api/';
 	API_END_POINT = 'https://cfax-sandbox.clearfly.net/cfax/rest/';
@@ -275,19 +280,44 @@ export class LoginService{
     }
 
   //post method
-      newuserlogin(userName: string, password: string) : any{
+      newuserlogin(userName: string, password: string) : Promise<any> {
       const loginUrl = constant.API_END_POINT + 'user/login';
       const headers = new Headers(   
-    { 'Content-Type' : 'application/json', 
-      // 'Olympiadbox-Api-Key': btoa(userName + ':' + password) });
+    { 'Content-Type' : 'application/json',       
       'Olympiadbox-Api-Key': '36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88'});      
        return this.http.post(loginUrl,JSON.stringify({'username': userName,'password':password}),{ headers })
       .toPromise()
       .then((response) => response)
       .catch(this.handleError);      
      }
-       
-       
+
+
+     getprofiledetails() : Promise<any> {
+       const loginUrl = constant.API_END_POINT + 'user/profile';
+       const headers = new Headers(   
+    { 'Content-Type' : 'application/json',       
+      'Olympiadbox-Api-Key': '36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88',
+      'Session_token': localStorage.getItem('setToken')
+      });
+       return this.http.get(loginUrl,{ headers })
+      .toPromise()
+      .then((response) => response)
+      .catch(this.handleError);
+     }
+
+     updateuserprofile(obj) : Promise<any> {        
+       const loginUrl = constant.API_END_POINT + 'user/update';
+       const headers = new Headers(   
+    { 'Content-Type' : 'application/json',       
+      'Olympiadbox-Api-Key': '36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88',
+      'Session_token': localStorage.getItem('setToken')
+      });
+       return this.http.post(loginUrl,JSON.stringify(obj),{ headers })
+      .toPromise()
+      .then((response) => response)
+      .catch(this.handleError);     
+     }   
+    
 
 
 }

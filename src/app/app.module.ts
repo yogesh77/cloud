@@ -73,7 +73,8 @@ import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { GrowlModule } from 'primeng/growl';
-import { UserloginComponent } from './userlogin/userlogin.component'
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { UpdateprofileComponent } from './updateprofile/updateprofile.component'
 
 
 @NgModule({
@@ -93,6 +94,7 @@ import { UserloginComponent } from './userlogin/userlogin.component'
         BlockedComponent,
         EmailsettingsComponent,
         UserloginComponent,
+        UpdateprofileComponent,
         /*TableBasicExample,*/
         /*PeriodicElement*/
 

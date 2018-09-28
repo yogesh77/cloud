@@ -43,7 +43,7 @@ export class UserloginComponent implements OnInit {
   		this.router.navigate(['/mainmenu/userlogin/updateprofile']);	
   		// this.router.navigate(['/mainmenu/dashboard']);
   		// console.log('val' ,typeof localStorage.getItem('setToken'));
-  		console.log('val' + localStorage.getItem('setToken'));
+  		// console.log('val' + localStorage.getItem('setToken'));
   		this.loginService.getprofiledetails()
   		.then((res=> console.log('hel', res)))
   		.catch

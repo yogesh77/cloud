@@ -317,6 +317,10 @@ export class LoginService{
       .then((response) => response)
       .catch(this.handleError);     
      }   
+
+     // getuserprofiledetails() Observable<obj>{
+
+     // }
     
 
 

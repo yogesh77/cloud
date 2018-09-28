@@ -1,6 +1,5 @@
-
-  <div class="loaderBodyBG">
-    <div *ngIf = "flag">
+<div class="loaderBodyBG">
+  <div *ngIf="flag">
     <div class="container box">
       <form class=".form-horizontal" [formGroup]="accountscredentials">
         <div class="form-group boxcenter">
@@ -26,15 +25,10 @@
           </div>
         </div>
       </form>
-
       <!-- <router-outlet></router-outlet> -->
-      
     </div>
-      
-
   </div>
-<div *ngIf="!flag">
-      <router-outlet></router-outlet>
-      </div>
+  <div *ngIf="!flag">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-

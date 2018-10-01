@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login/login.service';
 
+
 @Component({
   selector: 'app-updateprofile',
   templateUrl: './updateprofile.component.html',
@@ -14,7 +15,8 @@ export class UpdateprofileComponent implements OnInit {
   userprofile:any;
   userlastname: any;
   messageForUser: any;
-
+  flag: boolean = true;
+  message: any = [] ;
 	
 
   constructor(private loginService: LoginService) { }
@@ -53,10 +55,31 @@ export class UpdateprofileComponent implements OnInit {
 
   handleError(){}
 
-  updateuserprofile(){
-  this.loginService.updateuserprofile(this.credentials)
-  .then((res=> {console.log(res)}))
+  updateuserprofiles(){
+   this.flag=false;    
+   
+}
+
+
+
+finallyupdate(){
+  this.loginService.updateuserprofile(this.messageForUser)
+  .then((res=> {console.log('toto' + res)
+    this.show()
+    this.updateprofile();
+}))
   .catch()
+}
+
+show() {
+    // this.message.push({detail:'Update Successfully'});
+    alert("Profile updated successfully");
+}
+
+cancelupdate(){
+  this.updateprofile();  
+  this.flag = true;
+
 }
 
 }

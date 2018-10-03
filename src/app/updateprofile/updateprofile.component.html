@@ -1,36 +1,38 @@
 <div class="loaderBodyBG">
+  <p-messages [(value)]="msgs"></p-messages>
   <p-card>
-    <div class="container">
+    <div class="container" *ngIf="showHtml">
       <div class="row">
         <div class="col-sm-6">
           <div *ngIf="flag">
-            <input pInputText type="text" name="username" class="inputbox" [(ngModel)]="messageForUser" [disabled]="true" icon="pi pi-check">          
-        </div>
-        <div *ngIf="!flag">
-          <input pInputText type="text" name="username" class="inputbox" #username = "ngModel" [(ngModel)]="messageForUser">
-          <button pButton type="button" label="Info" class="ui-button-rounded ui-button-info"></button>
-        </div>
+            <input pInputText type="text" name="username" class="inputbox" [(ngModel)]="credentials['firstname']" [disabled]="true"> 	<!-- Name
+            <input [value]='name' (input)='Name=$event.target.value' /> {{name}} 
+          	New Name <input [(ngModel)]='name'> {{name}} -->
+          </div>
+          <div *ngIf="!flag">
+            <input pInputText type="text" name="username" class="inputbox" id="username" #username="ngModel" [(ngModel)]="credentials['firstname']">
+          </div>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-      	<div class="col-sm-6">
-        <div *ngIf="flag">          
-            <button pButton (click)="updateuserprofiles()" label="Edit"></button>
-          </div> 
-         </div> 
-         </div>       
-        <div *ngIf="!flag">   
-        	<div class="row">
-        <div class="col-sm-3">    
-            <p-button label="Save" styleClass="ui-button-raised ui-button-success" (click)="finallyupdate()"></p-button>         
-       </div>
-        <div class="col-sm-3">            
-              <p-button (click)="cancelupdate()" label="Cancel" styleClass="ui-button-info"></p-button>            
+        <div class="col-sm-6">
+          <div *ngIf="flag">
+            <button pButton (click)="updateuserprofiles()" label="Edit" class="ui-button-raised"></button>
+          </div>
         </div>
-        </div>  
+      </div>
+      <div *ngIf="!flag">
+        <div class="row">
+          <div class="col-sm-3">
+            <p-button label="Save" styleClass="ui-button-raised ui-button-success" (click)="updateprofile()"></p-button>
+          </div>
+          <div class="col-sm-3">
+            <p-button (click)="cancelupdate()" label="Cancel" styleClass="ui-button-raised ui-button-danger"></p-button>
+          </div>
         </div>
-        </div>   
+      </div>
+    </div>
   </p-card>
 </div>

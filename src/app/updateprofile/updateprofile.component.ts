@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login/login.service';
+import { Message } from 'primeng/components/common/api';
 
 
 @Component({
@@ -9,38 +10,46 @@ import { LoginService } from '../login/login.service';
 })
 export class UpdateprofileComponent implements OnInit {
 
-	// country: string = "england";
-  country: string;
+	country: string = "India";
+  name: string = 'Sachin';
   credentials: any;
   userprofile:any;
   userlastname: any;
-  messageForUser: any;
+  userLastName: any;
+  showHtml: boolean;
   flag: boolean = true;
   message: any = [] ;
+  msgs: Message[] = [];
 	
 
-  constructor(private loginService: LoginService) { }
-
-  ngOnInit() {
-    this.updateprofile()
+  constructor(private loginService: LoginService) { 
+    this.name = 'Sachin';
   }
 
-  updateprofile(){
+  ngOnInit() {
+    this.viewprofile()
+  }
 
+  viewprofile(){
+    this.showHtml = false;
     // alert("hello");
 
-    this.credentials = { "country": this.country}
+    // this.credentials = { "country": this.country, "address": this.country,
+    //  "mobile": '9874563210', "firstname": 'Ram', "lastname": this.userLastName, birthdate: '12/12/2012',
+    //  "state":'delhi', "city": 'delhi', "pincode": 2023632, "gender": 'Male', "school_id":1}
 
     this.loginService.getprofiledetails()
   	
   	.then((res=> {
       // console.log('response', res);            
       this.userprofile = JSON.parse(res._body);
+      this.credentials = this.userprofile['message'][0]['user_info'];
       // console.log('body', this.userprofile);  
-      this.userlastname = this.userprofile.message;
+      // this.userlastname = this.userprofile.message;
       // console.log('message', this.userlastname);      
-      this.messageForUser = this.userprofile['message'][0]['user_info']['lastname'];
-      console.log('class', this.messageForUser);
+      // this.userLastName = this.userprofile['message'][0]['user_info']['lastname'];
+      console.log('class', this.userLastName);
+      this.showHtml = true;
 
       }))
 
@@ -62,22 +71,23 @@ export class UpdateprofileComponent implements OnInit {
 
 
 
-finallyupdate(){
-  this.loginService.updateuserprofile(this.messageForUser)
+updateprofile(){
+  this.loginService.updateuserprofile(this.credentials)
   .then((res=> {console.log('toto' + res)
-    this.show()
-    this.updateprofile();
+    this.msgs.push({severity:'info',detail:'Profile updated successfully'});
+    this.viewprofile();
+    this.flag = true;
 }))
   .catch()
 }
 
 show() {
-    // this.message.push({detail:'Update Successfully'});
-    alert("Profile updated successfully");
+    
+    // alert("Profile updated successfully");
 }
 
 cancelupdate(){
-  this.updateprofile();  
+  this.viewprofile();  
   this.flag = true;
 
 }

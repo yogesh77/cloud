@@ -46,7 +46,7 @@ export class UserloginComponent implements OnInit {
   		// console.log('val' + localStorage.getItem('setToken'));
   		this.loginService.getprofiledetails()
   		.then((res=> console.log('hel', res)))
-  		.catch
+  		.catch()
 
   	}))
   	.catch()

@@ -5,7 +5,7 @@ import { Message } from 'primeng/components/common/api';
 
 @Component({
   selector: 'app-updateprofile',
-  templateUrl: './updateprofile.component.html',
+  templateUrl: './updateprofile.component.html',  
   styleUrls: ['./updateprofile.component.scss']
 })
 export class UpdateprofileComponent implements OnInit {
@@ -20,6 +20,7 @@ export class UpdateprofileComponent implements OnInit {
   flag: boolean = true;
   message: any = [] ;
   msgs: Message[] = [];
+  isDisabled: boolean = true;
 	
 
   constructor(private loginService: LoginService) { 
@@ -43,12 +44,13 @@ export class UpdateprofileComponent implements OnInit {
   	.then((res=> {
       // console.log('response', res);            
       this.userprofile = JSON.parse(res._body);
-      this.credentials = this.userprofile['message'][0]['user_info'];
+      // this.credentials = this.userprofile['message'][0]['user_info'];
+      this.credentials = this.userprofile.message[0].user_info;
       // console.log('body', this.userprofile);  
       // this.userlastname = this.userprofile.message;
       // console.log('message', this.userlastname);      
       // this.userLastName = this.userprofile['message'][0]['user_info']['lastname'];
-      console.log('class', this.userLastName);
+      // console.log('class', this.userLastName);
       this.showHtml = true;
 
       }))

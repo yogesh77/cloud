@@ -5,7 +5,7 @@ import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-userlogin',
-  templateUrl: './userlogin.component.html',
+  templateUrl: './userlogin.component.html',  
   styleUrls: ['./userlogin.component.scss']
 })
 export class UserloginComponent implements OnInit {
@@ -24,6 +24,7 @@ export class UserloginComponent implements OnInit {
 
   constructor(private loginService: LoginService, private router: Router) { }
 
+  
   ngOnInit() {
   }
 
@@ -58,6 +59,9 @@ export class UserloginComponent implements OnInit {
   	.catch
   }
 
+  showalert(){
+    return "Incedo";
+  }
   
 
 }

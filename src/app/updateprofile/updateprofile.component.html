@@ -1,13 +1,18 @@
 <div class="loaderBodyBG">
-  <p-messages [(value)]="msgs"></p-messages>
+	
+  <!-- <p-messages [(value)]="msgs"></p-messages> -->
+  <p-growl [(value)]="msgs"></p-growl>
   <p-card>
     <div class="container" *ngIf="showHtml">
       <div class="row">
         <div class="col-sm-6">
           <div *ngIf="flag">
-            <input pInputText type="text" name="username" class="inputbox" [(ngModel)]="credentials['firstname']" [disabled]="true"> 	<!-- Name
-            <input [value]='name' (input)='Name=$event.target.value' /> {{name}} 
-          	New Name <input [(ngModel)]='name'> {{name}} -->
+            <input pInputText type="text" name="username" class="inputbox" [(ngModel)]="credentials['firstname']" 
+            [disabled]= 'isDisabled'> 	
+            <!-- disabled= '{{isDisabled}}' -->
+            <!-- Name
+            <input [value]='name' (input)='name=$event.target.value' /> {{name}}  -->
+          	<!-- New Name <input [(ngModel)]='name'> {{name}} -->
           </div>
           <div *ngIf="!flag">
             <input pInputText type="text" name="username" class="inputbox" id="username" #username="ngModel" [(ngModel)]="credentials['firstname']">

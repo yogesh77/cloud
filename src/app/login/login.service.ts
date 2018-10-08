@@ -318,9 +318,7 @@ export class LoginService{
       .catch(this.handleError);     
      }   
 
-     // getuserprofiledetails() Observable<obj>{
-
-     // }
+     
     
 
 

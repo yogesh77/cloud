@@ -75,7 +75,8 @@ import { MessageModule } from 'primeng/message';
 import { GrowlModule } from 'primeng/growl';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
-import { EditprofileComponent } from './editprofile/editprofile.component'
+import { EditprofileComponent } from './editprofile/editprofile.component';
+import { UserdetailComponent } from './userdetail/userdetail.component'
 
 
 @NgModule({
@@ -97,6 +98,7 @@ import { EditprofileComponent } from './editprofile/editprofile.component'
         UserloginComponent,
         UpdateprofileComponent,
         EditprofileComponent,
+        UserdetailComponent,
         /*TableBasicExample,*/
         /*PeriodicElement*/
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login/login.service';
+import { NgForm }    from '@angular/forms';
+
 /*import { MenuComponent } from './menu/menu.component';*/
 
 @Component({
@@ -78,5 +80,9 @@ handleError(){
    }
 
   EmpName = [{id: 1, name:'Yogesh'}];
+
+  saveemployee(empForm: NgForm){
+    console.log(empForm);
+  }
   
  }

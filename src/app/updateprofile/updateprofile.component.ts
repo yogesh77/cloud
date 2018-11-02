@@ -13,6 +13,7 @@ export class UpdateprofileComponent implements OnInit {
 	country: string = "India";
   name: string = 'Sachin';
   credentials: any;
+  credential: any;
   userprofile:any;
   userlastname: any;
   userLastName: any;
@@ -46,6 +47,10 @@ export class UpdateprofileComponent implements OnInit {
       this.userprofile = JSON.parse(res._body);
       // this.credentials = this.userprofile['message'][0]['user_info'];
       this.credentials = this.userprofile.message[0].user_info;
+      this.credential = this.userprofile.message[0]['class_info']['name'];
+      
+      console.log("class" , this.credential);
+
       // console.log('body', this.userprofile);  
       // this.userlastname = this.userprofile.message;
       // console.log('message', this.userlastname);      

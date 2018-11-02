@@ -9,8 +9,7 @@ export class UserdetailComponent implements OnInit {
 
   heading: string = 'Welcome';
 
-  @Input()
-  useralert: string;
+  @Input() useralert: string;
 
   constructor() { }
 

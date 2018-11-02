@@ -59,6 +59,7 @@ export class UserloginComponent implements OnInit {
   	.catch
   }
 
+  //Function
   showalert(){
     return "Incedo";
   }

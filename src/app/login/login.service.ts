@@ -8,88 +8,88 @@ import * as constant from '../../../conf/constant';
 
 export class LoginService{
 
-	account: string;
+  account: string;
   queryHeaders;
-	public accountDetail:string;
-	constructor(private http: Http, private tokenService: TokenService) {
+  public accountDetail:string;
+  constructor(private http: Http, private tokenService: TokenService) {
     
     this.queryHeaders = new Headers();
     this.queryHeaders.append('Session_token', localStorage.getItem('setToken'));
   }
 
   API_END_POINTS = 'http://scripts.olympiadbox.com/services/fronty-api/';
-	API_END_POINT = 'https://cfax-sandbox.clearfly.net/cfax/rest/';
-	URL = "https://cfax-sandbox.clearfly.net/cfax/rest/aaa/login?rememberMe=true";
-	accountUrl = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/products";
-	accountsender = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/senders";
+  API_END_POINT = 'https://cfax-sandbox.clearfly.net/cfax/rest/';
+  URL = "https://cfax-sandbox.clearfly.net/cfax/rest/aaa/login?rememberMe=true";
+  accountUrl = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/products";
+  accountsender = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/senders";
 
-	submit(userName: string, password: string){
-		return this.post(userName, password);
-	}
+  submit(userName: string, password: string){
+    return this.post(userName, password);
+  }
 
-	//post method
-	post(userName: string, password: string) : any{
-  	const loginUrl = this.URL;
-  	const headers = new Headers( 	
-	{ 'Content-Type' : 'application/json', 
-	  'Authorization': 'Basic' + btoa(userName + ':' + password) });	
-	   return this.http.post(loginUrl, '', { headers })
-	  .toPromise()
-	  .then((response) => response)
-      .catch(this.handleError);    	
-	}
+  //post method
+  post(userName: string, password: string) : any{
+    const loginUrl = this.URL;
+    const headers = new Headers(   
+  { 'Content-Type' : 'application/json', 
+    'Authorization': 'Basic' + btoa(userName + ':' + password) });  
+     return this.http.post(loginUrl, '', { headers })
+    .toPromise()
+    .then((response) => response)
+      .catch(this.handleError);      
+  }
 
-	//get function 
-	getaccounts(): any{	
-		const accountsUrl = this.accountUrl;
-		const token: string = this.tokenService.getToken()
-		const headers = new Headers(			
-	{
-		'Content-Type' : 'application/json',
-		'authorization': 'Bearer ' + token });		
-		return this.http.get(accountsUrl,{ headers })
-		.toPromise()
-	 	.then((res) => {return res;})		
-      	.catch(this.handleError);
-	}
+  //get function 
+  getaccounts(): any{  
+    const accountsUrl = this.accountUrl;
+    const token: string = this.tokenService.getToken()
+    const headers = new Headers(      
+  {
+    'Content-Type' : 'application/json',
+    'authorization': 'Bearer ' + token });    
+    return this.http.get(accountsUrl,{ headers })
+    .toPromise()
+     .then((res) => {return res;})    
+        .catch(this.handleError);
+  }
 
-	
-	//for error handling
-	
+  
+  //for error handling
+  
 
-	//on login success
-	/*onLoginSuccess(response){
+  //on login success
+  /*onLoginSuccess(response){
     let tokenvalue = JSON.parse(response._body);
     this.account = tokenvalue.jwt;
     this.getaccounts();
     console.log(response);
-  	}
+    }
 */
 
-	/*getAuthorized(accId: number): Promise<any>
-	{ return this.get(accId); }*/
+  /*getAuthorized(accId: number): Promise<any>
+  { return this.get(accId); }*/
 
-	accountsenderid(): any{	
-		const accountSender = this.accountsender;
-		const token: string = this.tokenService.getToken()
-		const headers = new Headers(			
-	{
-		'Content-Type' : 'application/json',
-		'authorization': 'Bearer ' + token });		
-		return this.http.get(accountSender,{ headers })
-		.toPromise()
-	 	.then((res) => {return res;})		
-      	.catch(this.handleError);
-	}
+  accountsenderid(): any{  
+    const accountSender = this.accountsender;
+    const token: string = this.tokenService.getToken()
+    const headers = new Headers(      
+  {
+    'Content-Type' : 'application/json',
+    'authorization': 'Bearer ' + token });    
+    return this.http.get(accountSender,{ headers })
+    .toPromise()
+     .then((res) => {return res;})    
+        .catch(this.handleError);
+  }
 /*
-	onLoginSucces(){
+  onLoginSucces(){
     let tokenvalue = JSON.parse(response._body);
     this.account = tokenvalue.jwt;
     this.accountsenderid();
     console.log(this.accountsenderid());
-  	}*/
-	
-  	getDownloadRecords(accId: number, startDate: string, endDate: string, csv: any) {
+    }*/
+  
+    getDownloadRecords(accId: number, startDate: string, endDate: string, csv: any) {
        // https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/records?start=2017-08-01&end=2017-11-16&number=4067940226&csv=flase
        const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/records?start=" +
        startDate + '&end=' + endDate + '&number=' +accId+ '&csv=' + 'true';
@@ -111,16 +111,16 @@ export class LoginService{
     }
 
     accountDetails(): Promise<any> {
-    	const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1";
-    	const token: string = this.tokenService.getToken();
-    	const headers = new Headers({ Authorization: 'Bearer ' + token });
-      	return this.http.get(url, { headers })
+      const url = "https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1";
+      const token: string = this.tokenService.getToken();
+      const headers = new Headers({ Authorization: 'Bearer ' + token });
+        return this.http.get(url, { headers })
         .toPromise()
         .then((res) => res)
         .catch(this.handleError);    
     }
 
-    displayRecords(accId: number, startDate: Date, endDate: string) {    	
+    displayRecords(accId: number, startDate: Date, endDate: string) {      
     const url = 'this.API_END_POINT' + 'accounts/' + accId + '/records?start=' +
     startDate + '&end=' + endDate;    
     const token: string = this.tokenService.getToken();
@@ -131,7 +131,7 @@ export class LoginService{
       .catch(this.handleError);
       }
 
-    displayrecord(): Promise<any> {    	
+    displayrecord(): Promise<any> {      
     const url = 'https://cfax-sandbox.clearfly.net/cfax/rest/accounts/1/records?start=2018-07-01&end=2018-07-31';    
     const token: string = this.tokenService.getToken();
     const headers = new Headers({ 'Authorization': 'Bearer ' + token });
@@ -317,7 +317,30 @@ export class LoginService{
       .then((response) => response)
       .catch(this.handleError);     
      }   
+getUseraccountsdetail() {
+       const url = this.API_END_POINT + 'users/accounts';
+       const token : string = this.tokenService.getToken()
+       const headers = new Headers();
+       headers.append('Authorization', 'Bearer ' + token);
+       headers.append('Content-Type', 'application/json');
+       return this.http.get(url, { headers }) 
+       .map ((res) => res.json());
+       // .map((res)=>res.json().userAccounts[0].faxNumber);              
+       
 
+     }
+     auserregistration(obj) : Promise<any> {
+        // const url = "http://scripts.olympiadbox.com/services/fronty-api/user/register";        
+        const url = constant.API_END_POINT + 'user/register';
+        const headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('Olympiadbox-Api-Key','36fda24fe5588fa4cdf23xxss226c6c2fdfbdb6b6bc7864699774c9jh790f706d05a88');
+        return this.http.post(url, JSON.stringify(obj),{ headers })       
+        .toPromise()
+        .then()
+        // .then((res) => {return res;})
+        .catch(this.handleError);
+      }  
      
     
 

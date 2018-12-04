@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-editprofile',
@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editprofile.component.scss']
 })
 export class EditprofileComponent implements OnInit {
+	
+	@Input() countNumber: string;
+	@Input()  name: string;
+	
+  	@Output() voted = new EventEmitter<boolean>();
+  	didVote = false;
 
-  constructor() { }
+  	constructor() {
+  	
+  	 }
 
-  ngOnInit() {
+
+  	ngOnInit() {
+ 	 }
+
+ 	 vote(agreed: boolean) {
+    	this.voted.emit(agreed);
+    	this.didVote = true;
   }
+ 	 
+
 
 }

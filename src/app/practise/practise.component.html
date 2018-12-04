@@ -1,0 +1,52 @@
+<div class="loaderBodyBG">
+	<div id="loadingWrapper">
+        <table>
+            <tr>
+                <td>
+                    <div class="logo"><img src="assets/clearfly-logoMain.png"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container headerWrapper">
+            <div class="navbar-header">
+	Welcome
+		</div>
+			</div>
+	</nav>
+
+    <!-- <li *ngFor="let voter of voters" >{{voters}}</li> -->
+    <h3>Agree: {{agreed}}, Disagree: {{disagreed}}</h3>
+    <!-- <app-editprofile [countNumber]="countNumber"></app-editprofile> -->
+    <app-editprofile *ngFor="let voter of voters" [name]="voter" (voted)="onVoted($event)">
+    </app-editprofile>
+
+
+    
+ <mat-table #tablemodal [dataSource]="data">
+                    <ng-container cdkColumnDef="PhoneNumber">
+                        <mat-header-cell *cdkHeaderCellDef class="color column-text"> Phone Number </mat-header-cell>
+                        <mat-cell *cdkCellDef="let row" class="column-text" [style.color]="row == faxColor ? 'green' : 'black'">{{row.faxNumber}} </mat-cell>
+                    </ng-container>
+                    
+                    <mat-header-row *cdkHeaderRowDef="accountsDisplayColumns" class=""></mat-header-row>
+                    <mat-row class="accountRows" *cdkRowDef="let row; columns: accountsDisplayColumns;" (mouseover)="faxHover(row)" (mouseleave)="faxHoverOut(row)" (click)="setSelectedAccDetails(row);accountSwitchModal.hide()">
+                    </mat-row>
+                </mat-table>
+</div>

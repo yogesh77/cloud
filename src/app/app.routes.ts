@@ -15,7 +15,8 @@ import { BlockedComponent } from './blocked/blocked.component';
 import { EmailsettingsComponent } from './emailsettings/emailsettings.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
-
+import { PractiseComponent } from './practise/practise.component';
+import { SenderComponent } from './mainmenu/sender/sender.component';
 
 export const routes: Routes = [
 
@@ -25,13 +26,16 @@ export const routes: Routes = [
 { path: 'login', component: LoginComponent },
 { path: 'mainmenu', component: MainmenuComponent,
 
-// { path: 'mainmenu', component: MainmenuComponent,
-
 children:[
 
 {
 	path: 'dashboard',
 	component: DashboardComponent,
+
+},
+{
+	path: 'sender',
+	component: SenderComponent,
 
 },
 
@@ -60,6 +64,10 @@ children:[
 {
 	path: 'emailsettings',
     component: EmailsettingsComponent,    
+},
+{
+	path: 'practise',
+    component: PractiseComponent,    
 },
 
 {

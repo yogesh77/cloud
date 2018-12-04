@@ -1,42 +1,28 @@
 <div class="loaderBodyBG">
-  <!-- <nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/email">E-mail</a>
-</nav> -->
-  <!-- <a routerLink="/mainmenu" (click)= "onMenuItemClick('mainmenu')"> h</a>
 
-						<router-outlet>
-                            
-                        </router-outlet> -->
-  <!-- <div class="fixed-header">
-    <div class="heading">
-    </div>
+  <div class="row">
+  <div class="col-lg-12">
+        <div class="container headerWrapper">
+            <div class="navbar-header">
+                <a class="navbar-brand logobtn"><img src="assets/clearfly-logo.png" /></a>
+                <div class="wrapLogout">WELCOMEs<a class="user"></a>&nbsp; &nbsp;<span class="circle" (click)="logout()"><i class="fa fa-sign-out logoutIco" aria-hidden="true" ></i></span></div>
+            </div>
+        </div>
+  
+  </div>
+</div>
 
-    <p-tabView (onChange)="onChange($event)" [activeIndex]="selectedIndex" routerLink="/accounts/accounts">
-      <p-tabPanel header="dashboard" [selected]="true">
-        Dashboard
-      </p-tabPanel>
-      <p-tabPanel header="accounts">
-        Accounts
-        <ng-template pTemplate="content">
-           
-        </ng-template>
-      </p-tabPanel>
-      <p-tabPanel header="email">
-        email
-      </p-tabPanel>
-    </p-tabView>
-  </div> -->
 
-  <nav class="">
-  <div class="container-fluid">
-    <p-tabView (onChange)="onChange($event)" 
-    [activeIndex]="selectedIndex">
-      <p-tabPanel header="Dashboard">
+<div class="row">
+  <div class="col-lg-2 contentHeight"> 
+    
+  <div class="container">
+    <p-tabView (onChange)="onChange($event)">
+      <p-tabPanel header="Dashboard" [selected]="true" >
       </p-tabPanel>
       <p-tabPanel header="Accounts" >
       </p-tabPanel>
-      <p-tabPanel header="Account Authorization" [selected]="true">
+      <p-tabPanel header="Account Authorization" >
       </p-tabPanel>
       <p-tabPanel header="Blocked Numbers">
       </p-tabPanel>
@@ -44,15 +30,29 @@
       </p-tabPanel>
       <p-tabPanel header="New Login">
       </p-tabPanel>
+       <p-tabPanel header="Sender">
+      </p-tabPanel>
     </p-tabView>
-    <div class="col-md-12 wrapperRight">
-      <router-outlet>
-      </router-outlet>
-    </div>
   </div>
-</nav>
+      
+    <p-tabMenu [model]="items">D</p-tabMenu>
+  
+  </div>
+
+<div class= "col-lg-8">
+  <!-- <a class="list-group-item lftNv " routerLink="/mainmenu/sender"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;Fax Records </a> -->
+<div>
+  <router-outlet>
+      </router-outlet>
+      </div>
+
+  
+
+</div>
 
 
+
+</div>
 
 
  <!--  <p-tabView>
@@ -69,9 +69,14 @@
     <router-outlet></router-outlet>
 </p-tabView> -->
 
-  
-  
-
-
+  <div class="container footerWrapper">
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <p>&copy; Clearfly Communications. All rights reserved.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
 
 </div>

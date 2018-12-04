@@ -9,7 +9,8 @@ import { Router, ActivatedRoute, Params} from '@angular/router';
 export class MainmenuComponent implements OnInit {
 
 
-	selectedIndex: any = '';
+	selectedIndex: any = 0;
+  
 
   constructor(private router: Router, public activatedRoute: ActivatedRoute) { }
 
@@ -37,7 +38,10 @@ onChange($event) {
         break; 
       case 5:
         this.router.navigate(['/mainmenu/userlogin']); 
-        break;      
+        break;  
+      case 6:
+        this.router.navigate(['/mainmenu/sender']); 
+        break;    
       default:
       alert("Please Select");
       break;

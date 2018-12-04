@@ -40,7 +40,7 @@ export class AppComponent implements OnInit
         this.translate.use('en');*/
 
         // this.router.navigate(['/mainmenu']);
-        this.router.navigate(['/login']);
+        this.router.navigate(['/login/']);
         // this.router.navigate(['/email/']);
     }
 }

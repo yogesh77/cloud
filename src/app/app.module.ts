@@ -30,7 +30,7 @@ MatIconModule, MatInputModule, MatButtonModule, MatProgressSpinnerModule, MatToo
 import { MatDialogModule, MatNativeDateModule,
          MatDatepickerModule, MatSidenavModule, MatToolbarModule, MatListModule, MatSortModule, MatPaginatorModule } from '@angular/material';
 
-import { MatTableModule } from '@angular/material/table';
+
 
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -51,7 +51,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { FaxrecordComponent } from './faxrecord/faxrecord.component';
 import { MenuComponent } from './menu/menu.component';
 
-
+import {TabMenuModule} from 'primeng/tabmenu';
 import { RecordsComponent } from './records/records.component';
 import { RecordstableComponent } from './recordstable/recordstable.component';
 import { PanelModule } from 'primeng/panel';
@@ -76,7 +76,10 @@ import { GrowlModule } from 'primeng/growl';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
-import { UserdetailComponent } from './userdetail/userdetail.component'
+import { UserdetailComponent } from './userdetail/userdetail.component';
+import { PractiseComponent } from './practise/practise.component'
+import { MatTableModule } from '@angular/material/table';
+import { SenderComponent } from './mainmenu/sender/sender.component';
 
 
 @NgModule({
@@ -99,6 +102,8 @@ import { UserdetailComponent } from './userdetail/userdetail.component'
         UpdateprofileComponent,
         EditprofileComponent,
         UserdetailComponent,
+        PractiseComponent,
+        SenderComponent,
         /*TableBasicExample,*/
         /*PeriodicElement*/
 
@@ -106,7 +111,7 @@ import { UserdetailComponent } from './userdetail/userdetail.component'
     imports     : [
         BrowserModule,
         BrowserAnimationsModule,
-        HttpClientModule,
+        HttpClientModule, 
         /*RouterModule.forRoot(appRoutes),*/
         TranslateModule.forRoot(),
         /*DataSource,*/
@@ -130,7 +135,7 @@ import { UserdetailComponent } from './userdetail/userdetail.component'
     MatProgressBarModule, MatCheckboxModule, MatInputModule, BrowserAnimationsModule,
     MatDialogModule, MatTableModule, MatRadioModule, CdkTableModule, MatIconModule,
     MatListModule, MatToolbarModule, MatSidenavModule, MatPaginatorModule, MatSortModule,
-    CardModule, DropdownModule,
+    CardModule, DropdownModule,TabMenuModule,
 
     DialogModule, TabViewModule, ToggleButtonModule, ToastModule,
     MessageModule,MessagesModule, GrowlModule, ReactiveFormsModule
